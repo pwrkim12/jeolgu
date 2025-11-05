@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="familyism.metaTitle">팩토리패밀리즘 | 함께 만드는 사람들</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>팩토리패밀리즘</title>
+    <!-- 공통 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 전용 -->
+    <link rel="stylesheet" href="css/factory-familyism.css" />
   </head>
   <body>
     <header class="site-header">
@@ -15,10 +18,10 @@
 
         <nav class="nav">
           <ul class="menu">
-            <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
-            <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
-            <li><a href="factory-familyism.html" data-i18n="nav.familyism" class="is-active"></a></li>
-            <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
+            <li><a href="jeolgu-factory.html">절구팩토리</a></li>
+            <li><a href="jeolgu-mill.html">절구방앗간</a></li>
+            <li><a href="factory-familyism.html" class="is-active">팩토리패밀리즘</a></li>
+            <li><a href="inquiry.html">문의 사항</a></li>
           </ul>
         </nav>
 
@@ -37,60 +40,48 @@
     </header>
 
     <div id="drawerBackdrop" class="backdrop"></div>
-
     <aside id="mobileDrawer" class="drawer" aria-hidden="true">
       <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
       <ul class="drawer-menu">
-        <li><a href="index.html" data-i18n="nav.home"></a></li>
-        <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
-        <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
-        <li><a href="factory-familyism.html" data-i18n="nav.familyism"></a></li>
-        <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
-        <li>
-          <label class="drawer-lang-label" for="m-lang">Language</label>
-          <select id="m-lang" class="drawer-lang-select" data-lang-select>
-            <option value="ko">🇰🇷 한국어</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="ja">🇯🇵 日本語</option>
-          </select>
-        </li>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="jeolgu-factory.html">절구팩토리</a></li>
+        <li><a href="jeolgu-mill.html">절구방앗간</a></li>
+        <li><a href="factory-familyism.html">팩토리패밀리즘</a></li>
+        <li><a href="inquiry.html">문의 사항</a></li>
       </ul>
     </aside>
 
-    <section class="sub-hero">
-      <div class="sub-hero-inner">
-        <p class="eyebrow" data-i18n="familyism.eyebrow">FACTORY FAMILYISM</p>
-        <h1 data-i18n="familyism.title">콘텐츠, 납품, 촬영을 같이 하는 패밀리</h1>
-        <p data-i18n="familyism.desc">
-          너가 말했던 “같이 하는 사람들 묶어서 보여줄 수 있는 페이지” 용도로 잡아둔 거야. 카드/그리드로 사람·업체를 넣어주면 돼.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section class="sub-hero">
+        <div class="sub-hero-inner">
+          <p class="eyebrow">FACTORY FAMILYISM</p>
+          <h1>함께 만드는 콘텐츠·협업 스튜디오</h1>
+          <p>브랜드·카페·로컬과 같이 묶어 프로모션하는 영역을 이 페이지에 쌓으면 됩니다.</p>
+        </div>
+      </section>
 
-    <main class="section">
-      <div class="container cards-3">
-        <article class="card">
-          <div class="card-thumb">📸</div>
-          <h3 data-i18n="familyism.card1.title">콘텐츠 팀</h3>
-          <p data-i18n="familyism.card1.desc">유튜브, 블로그, 쇼츠 촬영 같이 하는 팀</p>
-        </article>
-        <article class="card">
-          <div class="card-thumb">🤝</div>
-          <h3 data-i18n="familyism.card2.title">제휴 카페·디저트숍</h3>
-          <p data-i18n="familyism.card2.desc">떡·디저트 납품 받는 매장 리스트</p>
-        </article>
-        <article class="card">
-          <div class="card-thumb">🧑‍🍳</div>
-          <h3 data-i18n="familyism.card3.title">시제품 테스트 그룹</h3>
-          <p data-i18n="familyism.card3.desc">새 레시피 테스트해주는 크루</p>
-        </article>
-      </div>
+      <section class="section">
+        <div class="container cards-3">
+          <article class="card">
+            <h3>브랜드 콜라보</h3>
+            <p>제품만 절구팩토리로 하고 네이밍은 파트너 이름으로.</p>
+          </article>
+          <article class="card">
+            <h3>촬영·콘텐츠</h3>
+            <p>사진 소스, 썸네일, 인스타 비율로 컷까지 제공.</p>
+          </article>
+          <article class="card">
+            <h3>공동 패키지</h3>
+            <p>택배/소분/행사용 패키지 같이 쓰기.</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-      <p data-i18n="footer.copy">© 2025 2STO Clone. All rights reserved. ㉕</p>
-      <p data-i18n="footer.address">서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
-      <p data-i18n="footer.tel">TEL. 02-1234-5678, E-mail. info@2sto.com</p>
+      <p>© 2025 2STO Clone. All rights reserved.</p>
+      <p>서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
+      <p>TEL. 02-1234-5678, E-mail. info@2sto.com</p>
     </footer>
 
     <script defer src="js/i18n.js"></script>
