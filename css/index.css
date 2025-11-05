@@ -1,19 +1,84 @@
-/* ===== 메인 히어로 ===== */
 .hero {
-  background: url('../images/hero.png') center center / cover no-repeat;
-  height: 60vh;
-  min-height: 560px;
+  background: url('../images/hero.jpg') center center / cover no-repeat; /* ✅ hero.jpg로 교체 */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  position: relative;
+  color: #1f1f1f;
 }
 
-/* 메인에 글이 따로 있으면 이렇게 */
-.hero .hero-inner {
-  max-width: 720px;
-  padding: 0 16px;
+/* 배경 위 투명도 조정: 글씨가 선명하게 보이도록 반투명 화이트 오버레이 */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55); /* ✅ 밝은 오버레이 (텍스트 대비 개선) */
+  z-index: 1;
+}
+
+/* 중앙 텍스트 박스 */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8); /* ✅ 반투명 화이트 배경 */
+  border-radius: 20px;
+  padding: 50px 60px;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+}
+
+/* 상단 영역 */
+.hero-top h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 1.8rem;
+  color: #2c1f15;
+  margin-bottom: 6px;
+}
+.hero-top .eng-title {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  color: #5a4b3d;
+  margin-bottom: 28px;
+}
+
+/* 중앙 문구 */
+.hero-center .brand-desc {
+  font-family: 'GmarketSansBold';
+  font-size: 1.2rem;
+  color: #2c1f15;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* 하단 문구 */
+.hero-bottom p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1rem;
+  color: #2c2c2c;
+  margin-top: 12px;
+}
+.hero-bottom .green {
+  color: #54b848;
+  font-weight: bold;
+}
+
+/* 반응형 조정 (모바일용) */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 30px 20px;
+  }
+  .hero-top h2 {
+    font-size: 1.4rem;
+  }
+  .hero-center .brand-desc {
+    font-size: 1rem;
+  }
+  .hero-bottom p {
+    font-size: 0.9rem;
+  }
 }
 
 /* 메인 카드 3개 */
