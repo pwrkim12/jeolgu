@@ -25,14 +25,15 @@
     font-family: 'GmarketSansBold';
     font-size: 3.6rem;
     /* ✅ 크게 변경 */
-
     color: #000000;
     /* 진한 톤으로 대비 강화 */
     margin-bottom: -10px;
     letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .hero-top .eng-title {
+
     font-family: 'GmarketSansMedium';
     font-size: 1.4rem;
     /* ✅ 영어도 키움 */
