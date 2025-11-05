@@ -167,3 +167,13 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
 }
+
+/* 본문 (소개 문구 스타일) */
+.intro-desc p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  line-height: 1.9; /* ✅ 가독성 향상 */
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
