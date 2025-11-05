@@ -265,3 +265,22 @@ main {
     padding: 46px 14px;
   }
 }
+
+
+/* ===== 공통: 폰트 굵기 설정 (추가됨) ===== */
+/* 제목, 메뉴, 강조 구간은 Bold / 본문은 Medium 유지 */
+
+h1, h2, h3, h4, h5, h6,
+.eyebrow,
+.nav .menu a,
+.feature h3,
+.card h3,
+.footer strong {
+  font-family: 'GmarketSansBold', 'Noto Sans KR', sans-serif; /* ✅ 제목/강조용 */
+  font-weight: bold;
+}
+
+p, li, label, input, textarea, select, button {
+  font-family: 'GmarketSansMedium', 'Noto Sans KR', sans-serif; /* ✅ 본문/설명용 */
+  font-weight: normal;
+}
