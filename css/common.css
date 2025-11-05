@@ -13,11 +13,12 @@
 
 body {
   margin: 0;
-  font-family: 'NanumSquare', 'Noto Sans KR', sans-serif;
+  font-family: 'GmarketSansMedium', 'Noto Sans KR', sans-serif; /* ✅ 폰트 교체 */
   background: #fff;
   color: #1f2d3d;
   line-height: 1.5;
 }
+
 
 img {
   max-width: 100%;
