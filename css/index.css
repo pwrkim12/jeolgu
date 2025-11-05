@@ -33,12 +33,7 @@
   font-weight: 600;
 }
 
-/* 중앙 박스 (투명도 강화) */
-.hero-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .center-box {
   background: rgba(255, 255, 255, 0.2); /* ✅ 투명도 조정 — 뒤 배경이 은은히 보이도록 */
   border-radius: 18px;
