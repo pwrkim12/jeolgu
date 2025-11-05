@@ -1,7 +1,7 @@
 /* ===== 메인 히어로 ===== */
 .hero {
   background: url('../images/hero.jpg') center center / cover no-repeat;
-  height: 900px; /* ✅ 높이 고정 — 필요 시 이 수치만 조절하면 됨 */
+  height: 850px; /* ✅ 높이 고정 — 필요 시 이 수치만 조절하면 됨 */
   position: relative;
   display: flex;
   flex-direction: column;
