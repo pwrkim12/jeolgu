@@ -56,7 +56,7 @@
     backdrop-filter: blur(6px);
     max-width: 640px;
     line-height: 1.7;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
 }
 
 .center-box p {
