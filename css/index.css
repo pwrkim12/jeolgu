@@ -29,7 +29,7 @@
     /* 진한 톤으로 대비 강화 */
     margin-bottom: -10px;
     letter-spacing: 1px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
 .hero-top .eng-title {
