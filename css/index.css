@@ -22,7 +22,7 @@
   font-family: 'GmarketSansBold';
   font-size: 3.6rem; /* ✅ 크게 변경 */
   color: #3a281a; /* 진한 톤으로 대비 강화 */
-  margin-bottom: 5x;
+  margin-bottom: 5px;
   letter-spacing: 1px;
 }
 .hero-top .eng-title {
