@@ -1264,12 +1264,10 @@ main {
   text-align: left;
 }
 
-/* about 영역 양쪽을 같은 폭으로 */
+/* 글-사진 높이 맞추기 */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* ← 글박스 : 이미지박스 = 1 : 1 */
-  gap: 46px;
-  align-items: flex-start;
+  align-items: stretch;              /* 양쪽 같은 높이로 */
+  gap: 30px;
 }
 
 /* 이미지 한 장 버전 */
