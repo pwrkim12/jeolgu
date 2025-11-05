@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">절구팩토리 메인</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- 로고 (홈으로) -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="절구팩토리" />
+            </a>
+
+            <!-- PC 메뉴 -->
+            <nav class="nav">
+                <ul class="menu">
+                    <!-- ❗ 홈은 로고로만 이동, 메뉴에는 안 넣기로 해서 뺐다 -->
+                    <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
+                    <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
+                    <li><a href="factory-familyism.html" data-i18n="nav.familyism"></a></li>
+                    <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
+                </ul>
+            </nav>
+
+            <!-- PC 언어 드롭다운 -->
+            <div class="lang-box desktop-lang">
+                <select class="lang-select" data-lang-select>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                </select>
+            </div>
+
+            <!-- 모바일 햄버거 -->
+            <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 모바일 백드롭 -->
+    <div id="drawerBackdrop" class="backdrop"></div>
+
+    <!-- 모바일 드로어 -->
+    <aside id="mobileDrawer" class="drawer" aria-hidden="true">
+        <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
+        <ul class="drawer-menu">
+            <!-- 모바일에서는 홈도 보여주자 -->
+            <li><a href="index.html" data-i18n="nav.home"></a></li>
+            <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
+            <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
+            <li><a href="factory-familyism.html" data-i18n="nav.familyism"></a></li>
+            <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
+            <li>
+                <label class="drawer-lang-label" for="m-lang">Language</label>
+                <select id="m-lang" class="drawer-lang-select" data-lang-select>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                </select>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- 메인 -->
+    <main>
+        <!-- 메인 히어로 (이미지만) -->
+        <section class="hero hero--image-only"></section>
+
+        <!-- 브랜드 스토리 -->
+        <section class="brand-story section">
+            <div class="container">
+                <h2 class="brand-title">절구팩토리의 시작</h2>
+                <p class="brand-text">
+                    절구팩토리는 단순히 떡을 소비자에게 판매하는 ‘한집 건너 한집의 떡집’이 아닌<br>
+                    한식문화를 세계에 알리고 함께 함으로써,<br>
+                    대한민국의 ‘요깃거리’로 글로벌문화를 함께 나눈다는 취지로 시작했습니다.
+                </p>
+                <p class="brand-text">
+                    프랜차이즈 인테리어는 전세계 여러 나라에 이미 대한민국의 한식가옥을 알리고 있는
+                    ‘양현모 장인님’의 팀이 저렴한 가격에 제대로 된 한식가옥의 참 맛을 보여줄 것이고,<br>
+                    국내에서 이미 잘 알려진 유수의 회사와의 협업으로 보다 좋은 제품을 만들어
+                    알리고자 노력하고 있습니다.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p data-i18n="footer.copy">© 2025 2STO Clone. All rights reserved. ㉕</p>
+        <p data-i18n="footer.address">서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
+        <p data-i18n="footer.tel">TEL. 02-1234-5678, E-mail. info@2sto.com</p>
+    </footer>
+
+    <!-- JS -->
+    <script defer src="js/i18n.js"></script>
+    <script defer src="js/nav.js"></script>
+</body>
+
+</html>
