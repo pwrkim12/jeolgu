@@ -15,7 +15,7 @@
 /* 상단: 전세계 수출 / WORLD EXPORT */
 .hero-top {
   position: absolute;
-  top: 80px; /* 위 여백 */
+  top: 50px; /* 위 여백 */
   text-align: center;
 }
 .hero-top h2 {
