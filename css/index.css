@@ -20,7 +20,7 @@
 }
 .hero-top h2 {
   font-family: 'GmarketSansBold';
-  font-size: 2.6rem; /* ✅ 크게 변경 */
+  font-size: 3.6rem; /* ✅ 크게 변경 */
   color: #3a281a; /* 진한 톤으로 대비 강화 */
   margin-bottom: 10px;
   letter-spacing: 1px;
