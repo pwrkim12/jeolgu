@@ -49,7 +49,7 @@
 }
 
 .center-box {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     /* ✅ 투명도 조정 — 뒤 배경이 은은히 보이도록 */
     border-radius: 18px;
     padding: 24px 32px;
