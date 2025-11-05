@@ -1317,3 +1317,87 @@ main {
   object-fit: cover;
   border-radius: 12px;
 }
+
+/* ===== 절구팩토리 히어로 섹션 ===== */
+.about-hero {
+  position: relative;
+  background: url('../images/22.jpg') center center / cover no-repeat;
+  height: 580px;                     /* 높이 (조절 가능) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* 불투명 오버레이 */
+.about-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);   /* 어둡게 (0.3~0.6 사이로 조절 가능) */
+  z-index: 1;
+}
+
+/* 텍스트 컨테이너 */
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 0 24px;
+}
+
+/* 제목 */
+.about-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+/* 리드문 */
+.about-content .lead {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* 중간 강조문 */
+.about-content .highlight {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 22px;
+  color: #f9f9f9;
+}
+
+/* 마지막 문단 */
+.about-content .footer {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* 강조 텍스트 컬러 */
+.about-content strong {
+  color: #fff7c5; /* 약간 노란빛 강조 */
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 420px;
+    padding: 20px 0;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-content .lead,
+  .about-content .highlight,
+  .about-content .footer {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+}
