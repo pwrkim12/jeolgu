@@ -1381,4 +1381,18 @@ main {
 }
 
 /* 가운데 정렬 유지 + 반응형 */
-@media (max-width: 768px)
+@media (max-width: 768px) {
+  .about-hero {
+    height: 400px;
+    background-position: center;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
