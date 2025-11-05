@@ -126,7 +126,7 @@
 /* ===== 절구팩토리는 (Hero 스타일) ===== */
 .intro-section {
   background: url('../images/back.jpg') center center / cover no-repeat;
-  height: 700px; /* ✅ 높이 조절 부분 — 이 값만 바꿔서 쉽게 조정 가능 */
+  height: 600px; /* ✅ 높이 조절 부분 — 이 값만 바꿔서 쉽게 조정 가능 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,8 +158,7 @@
   font-size: 2.6rem;
   margin-bottom: 20px;
   color: #fff;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); /* ✅ 외곽선으로 대비 강화 */
-}
+  }
 
 /* 본문 */
 .intro-inner .intro-text {
