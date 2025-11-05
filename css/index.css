@@ -21,12 +21,14 @@
 .hero-top h2 {
   font-family: 'GmarketSansBold';
   font-size: 3.6rem; /* ✅ 크게 변경 */
+  -webkit-text-stroke: 1.5px #000000; /* ✅ 외곽선 두께 / 색상 */
   color: #ffffff; /* 진한 톤으로 대비 강화 */
   margin-bottom: -10px;
   letter-spacing: 1px;
 }
 .hero-top .eng-title {
   font-family: 'GmarketSansMedium';
+  -webkit-text-stroke: 1.5px #000000; /* ✅ 외곽선 두께 / 색상 */
   font-size: 1.4rem; /* ✅ 영어도 키움 */
   letter-spacing: 3px;
   color: #ffffff;
