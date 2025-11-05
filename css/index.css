@@ -141,7 +141,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  
+  background: rgba(0, 0, 0, 0.35); /* ✅ 투명도 — 0.35 정도가 자연스러움 (배경 보이게 하려면 0.2로) */
   z-index: 1;
 }
 
