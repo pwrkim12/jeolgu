@@ -1,130 +1,110 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="jeolguFactory.metaTitle">절구팩토리 | 브랜드 소개</title>
-    <!-- 공통 -->
-    <link rel="stylesheet" href="css/common.css" />
-    <!-- 이 페이지 전용 -->
-    <link rel="stylesheet" href="css/jeolgu-factory.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="절구팩토리" />
-        </a>
+/* 이미지 위에 글만 있는 히어로 */
+.about-hero {
+  position: relative;
+  background: url('../images/22.jpg') center center / cover no-repeat;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 1;
+}
+.about-hero .about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.about-hero .about-content h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.about-hero .about-content p {
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+.about-hero .about-content strong {
+  color: #ffefb3;
+}
 
-        <nav class="nav">
-          <ul class="menu">
-            <li><a href="jeolgu-factory.html" class="is-active" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
-            <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill">절구방앗간</a></li>
-            <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
-            <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
-          </ul>
-        </nav>
+/* 아래쪽 글+사진 2열 */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  align-items: stretch;
+  margin-top: 46px;
+}
+.about-block {
+  background: #faf7f2;
+  padding: 26px 22px 22px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+.about-block h2 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  color: #3a2c22;
+}
+.about-block p {
+  color: #4a3d34;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 6px 0;
+}
+.about-block .quote {
+  background: #fff;
+  border-left: 4px solid #c5a06e;
+  border-radius: 6px;
+  padding: 14px 16px 12px;
+  text-align: left;
+  margin-top: 12px;
+}
 
-        <div class="lang-box desktop-lang">
-          <select class="lang-select" data-lang-select>
-            <option value="ko">🇰🇷 한국어</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="ja">🇯🇵 日本語</option>
-          </select>
-        </div>
+.about-photos.one {
+  height: 100%;
+  display: flex;
+}
+.about-photos.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
 
-        <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <div id="drawerBackdrop" class="backdrop"></div>
-    <aside id="mobileDrawer" class="drawer" aria-hidden="true">
-      <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
-      <ul class="drawer-menu">
-        <li><a href="index.html" data-i18n="nav.home">홈</a></li>
-        <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
-        <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill">절구방앗간</a></li>
-        <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
-        <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
-        <li>
-          <label class="drawer-lang-label" for="m-lang">Language</label>
-          <select id="m-lang" class="drawer-lang-select" data-lang-select>
-            <option value="ko">🇰🇷 한국어</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="ja">🇯🇵 日本語</option>
-          </select>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- 페이지 히어로 -->
-    <section class="sub-hero">
-      <div class="sub-hero-inner">
-        <p class="eyebrow" data-i18n="jeolguFactory.eyebrow">JEOLGU FACTORY</p>
-        <h1 data-i18n="jeolguFactory.title">쫀득·따뜻·수제 떡을 만드는 절구팩토리</h1>
-        <p data-i18n="jeolguFactory.desc">
-          브랜드 스토리, 사용하는 재료, 생산 방식, 협업 스튜디오 정보를 담는 영역입니다.
-        </p>
-      </div>
-    </section>
-
-    <!-- 네가 새로 만든 브랜드 설명 hero -->
-    <section class="about-hero">
-      <div class="about-content">
-        <h2>절구팩토리는</h2>
-        <p>전통 ‘대한민국’과 현대 ‘글로벌’의 조화로, 이제 전통의 요깃거리가 글로벌 요깃거리로 태어납니다.</p>
-        <p><strong>“2026 다시 뛰는 대한민국”</strong>의 정신을 업고 전통을 지우는 게 아니라 함께 뛰는 브랜드가 되겠습니다.</p>
-        <p>반도체, 자동차, K-POP에 이어 <strong>‘K-요깃거리’</strong>가 세계 속에 스며드는 한식문화의 선두가 되겠습니다.</p>
-      </div>
-    </section>
-
-    <!-- 특징 3개 -->
-    <section class="features section">
-      <div class="container">
-        <div class="feature">
-          <img src="https://picsum.photos/seed/icon1/120/120" alt="아이콘" />
-          <h3 data-i18n="feat.1.title">전문성</h3>
-          <p data-i18n="feat.1.desc">전문적인 인력과 노하우를 바탕으로 합니다.</p>
-        </div>
-        <div class="feature">
-          <img src="https://picsum.photos/seed/icon2/120/120" alt="아이콘" />
-          <h3 data-i18n="feat.2.title">성공적</h3>
-          <p data-i18n="feat.2.desc">고객분들의 성공적인 진행을 위해 최선을 다합니다.</p>
-        </div>
-        <div class="feature">
-          <img src="https://picsum.photos/seed/icon3/120/120" alt="아이콘" />
-          <h3 data-i18n="feat.3.title">확장성</h3>
-          <p data-i18n="feat.3.desc">더 넓은 세상에서의 꿈을 이룰 수 있도록.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 기타 섹션은 기존 그대로 -->
-    <section class="split section">
-      <div class="container split-inner">
-        <div class="split-media">
-          <img src="https://picsum.photos/seed/clients/840/520" alt="클라이언트 이미지" />
-        </div>
-        <div class="split-text">
-          <p class="eyebrow" data-i18n="clients.eyebrow">클라이언트님들을 위한</p>
-          <h2 data-i18n="clients.title">FOR CLIENTS</h2>
-          <p data-i18n="clients.desc">
-            우수 인재 확보를 위한 맞춤 전략을 기획·수립하고, 이에 대한 합리적인 결과치를 제공합니다.
-          </p>
-          <a href="jeolgu-mill.html" class="text-link" data-i18n="clients.cta">자세히 보기</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>© 2025 2STO Clone. All rights reserved.</p>
-      <p>서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
-      <p>TEL. 02-1234-5678, E-mail. info@2sto.com</p>
-    </footer>
-
-    <script defer src="js/i18n.js"></script>
-    <script defer src="js/nav.js"></script>
-  </body>
-</html>
+/* 반응형 */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photos.one {
+    height: auto;
+  }
+  .about-photos.one img {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .about-hero {
+    height: 280px;
+  }
+  .about-hero .about-content h2 {
+    font-size: 1.35rem;
+  }
+  .about-hero .about-content p {
+    font-size: 0.9rem;
+  }
+}
