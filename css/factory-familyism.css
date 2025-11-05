@@ -1,0 +1,27 @@
+/* 2단 split */
+.split-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 46px;
+}
+.split h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.split p {
+  color: #4c5c78;
+}
+.split .split-media img {
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .08);
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .split-inner {
+    grid-template-columns: 1fr;
+  }
+}
