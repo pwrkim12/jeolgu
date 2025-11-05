@@ -58,7 +58,7 @@
 /* 하단 문구 */
 .hero-bottom {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
 }
 .hero-bottom p {
   font-family: 'GmarketSansMedium';
