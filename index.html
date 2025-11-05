@@ -1,110 +1,122 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="meta.title">절구팩토리 메인</title>
-    <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
+    <title>절구팩토리 홈</title>
+    <!-- 공통 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 홈 전용 -->
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <!-- 헤더 -->
     <header class="site-header">
-        <div class="header-inner">
-            <!-- 로고 (홈으로) -->
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="절구팩토리" />
-            </a>
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="절구팩토리" />
+        </a>
 
-            <!-- PC 메뉴 -->
-            <nav class="nav">
-                <ul class="menu">
-                    <!-- ❗ 홈은 로고로만 이동, 메뉴에는 안 넣기로 해서 뺐다 -->
-                    <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
-                    <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
-                    <li><a href="factory-familyism.html" data-i18n="nav.familyism"></a></li>
-                    <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
-                </ul>
-            </nav>
+        <nav class="nav">
+          <ul class="menu">
+            <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
+            <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill">절구방앗간</a></li>
+            <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
+            <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
+          </ul>
+        </nav>
 
-            <!-- PC 언어 드롭다운 -->
-            <div class="lang-box desktop-lang">
-                <select class="lang-select" data-lang-select>
-                    <option value="ko">🇰🇷 한국어</option>
-                    <option value="en">🇺🇸 English</option>
-                    <option value="ja">🇯🇵 日本語</option>
-                </select>
-            </div>
-
-            <!-- 모바일 햄버거 -->
-            <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
-                <span></span><span></span><span></span>
-            </button>
+        <div class="lang-box desktop-lang">
+          <select class="lang-select" data-lang-select>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ja">🇯🇵 日本語</option>
+          </select>
         </div>
+
+        <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
-    <!-- 모바일 백드롭 -->
-    <div id="drawerBackdrop" class="backdrop"></div>
-
     <!-- 모바일 드로어 -->
+    <div id="drawerBackdrop" class="backdrop"></div>
     <aside id="mobileDrawer" class="drawer" aria-hidden="true">
-        <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
-        <ul class="drawer-menu">
-            <!-- 모바일에서는 홈도 보여주자 -->
-            <li><a href="index.html" data-i18n="nav.home"></a></li>
-            <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory"></a></li>
-            <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill"></a></li>
-            <li><a href="factory-familyism.html" data-i18n="nav.familyism"></a></li>
-            <li><a href="inquiry.html" data-i18n="nav.inquiry"></a></li>
-            <li>
-                <label class="drawer-lang-label" for="m-lang">Language</label>
-                <select id="m-lang" class="drawer-lang-select" data-lang-select>
-                    <option value="ko">🇰🇷 한국어</option>
-                    <option value="en">🇺🇸 English</option>
-                    <option value="ja">🇯🇵 日本語</option>
-                </select>
-            </li>
-        </ul>
+      <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
+      <ul class="drawer-menu">
+        <li><a href="index.html" data-i18n="nav.home">홈</a></li>
+        <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
+        <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill">절구방앗간</a></li>
+        <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
+        <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
+        <li>
+          <label class="drawer-lang-label" for="m-lang">Language</label>
+          <select id="m-lang" class="drawer-lang-select" data-lang-select>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ja">🇯🇵 日本語</option>
+          </select>
+        </li>
+      </ul>
     </aside>
 
-    <!-- 메인 -->
     <main>
-        <!-- 메인 히어로 (이미지만) -->
-        <section class="hero hero--image-only"></section>
+      <!-- 히어로 -->
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">JEOLGU BRAND</p>
+          <h1>전통의 ‘요깃거리’를 세계로</h1>
+          <p class="hero-text">
+            전통성은 살리고, 비주얼은 요즘 스타일로 맞춘 프랜차이즈형 떡·디저트 브랜드입니다.
+          </p>
+        </div>
+      </section>
 
-        <!-- 브랜드 스토리 -->
-        <section class="brand-story section">
-            <div class="container">
-                <h2 class="brand-title">절구팩토리의 시작</h2>
-                <p class="brand-text">
-                    절구팩토리는 단순히 떡을 소비자에게 판매하는 ‘한집 건너 한집의 떡집’이 아닌<br>
-                    한식문화를 세계에 알리고 함께 함으로써,<br>
-                    대한민국의 ‘요깃거리’로 글로벌문화를 함께 나눈다는 취지로 시작했습니다.
-                </p>
-                <p class="brand-text">
-                    프랜차이즈 인테리어는 전세계 여러 나라에 이미 대한민국의 한식가옥을 알리고 있는
-                    ‘양현모 장인님’의 팀이 저렴한 가격에 제대로 된 한식가옥의 참 맛을 보여줄 것이고,<br>
-                    국내에서 이미 잘 알려진 유수의 회사와의 협업으로 보다 좋은 제품을 만들어
-                    알리고자 노력하고 있습니다.
-                </p>
-            </div>
-        </section>
+      <!-- 여기가 네가 말한 브랜드 스토리 자리 -->
+      <section class="brand-strip">
+        <div class="container">
+          <h2>절구팩토리는</h2>
+          <p>
+            전통 ‘대한민국’과 현대 ‘글로벌’의 조화로 이젠 전통의 요깃거리가 글로벌 요깃거리로
+            <strong>‘다시’가 아니라 ‘함께’</strong> 태어납니다.
+          </p>
+          <p>
+            <strong>“2026 다시 뛰는 대한민국”</strong>의 흐름을 업고 전통을 지우는 게 아니라 전통을 업고 세계로 같이 뛰는
+            브랜드가 되겠습니다.
+          </p>
+          <p>
+            반도체, 자동차, K-POP에 이어 이제는 <strong>‘K-요깃거리’</strong>가 한식문화로 스며드는 데 앞장서겠습니다.
+          </p>
+        </div>
+      </section>
 
+      <!-- 카드 3개 정도 배치 -->
+      <section class="features section">
+        <div class="container">
+          <article class="feature">
+            <h3>쫀득한 식감</h3>
+            <p>절구 방식 일부 도입으로 식감을 살린 제품 라인.</p>
+          </article>
+          <article class="feature">
+            <h3>촬영·납품 패키지</h3>
+            <p>카페/쇼핑몰 납품 시 바로 쓰게 사이즈·패키지 제공.</p>
+          </article>
+          <article class="feature">
+            <h3>공동 브랜드 가능</h3>
+            <p>지자체·로컬 브랜드와 콜라보 가능한 구조.</p>
+          </article>
+        </div>
+      </section>
     </main>
 
-    <!-- 푸터 -->
     <footer class="footer">
-        <p data-i18n="footer.copy">© 2025 2STO Clone. All rights reserved. ㉕</p>
-        <p data-i18n="footer.address">서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
-        <p data-i18n="footer.tel">TEL. 02-1234-5678, E-mail. info@2sto.com</p>
+      <p>© 2025 2STO Clone. All rights reserved.</p>
+      <p>서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
+      <p>TEL. 02-1234-5678, E-mail. info@2sto.com</p>
     </footer>
 
-    <!-- JS -->
     <script defer src="js/i18n.js"></script>
     <script defer src="js/nav.js"></script>
-</body>
-
+  </body>
 </html>
-
-<!-- test -->
