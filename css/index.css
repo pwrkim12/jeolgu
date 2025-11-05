@@ -49,13 +49,13 @@
 }
 
 .center-box {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(141, 114, 114, 0.1);
     /* ✅ 투명도 조정 — 뒤 배경이 은은히 보이도록 */
     border-radius: 18px;
     padding: 24px 32px;
     backdrop-filter: blur(6px);
     max-width: 640px;
-    
+    line-height: 1.7;
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
 }
 
