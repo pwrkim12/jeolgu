@@ -11,11 +11,12 @@
     text-align: center;
     color: #2c1f15;
     overflow: hidden;
+    text-shadow: 0 1px 2px rgb(255, 255, 255);
 }
 
 /* 상단: 전세계 수출 / WORLD EXPORT */
 .hero-top {
-    text-shadow: 0 1px 2px rgb(255, 255, 255);
+    
     position: absolute;
     top: 0px;
     /* 위 여백 */
