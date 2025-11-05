@@ -1,0 +1,24 @@
+/* 문의 페이지 레이아웃 */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 46px;
+}
+.contact-form,
+.contact-side {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+  padding: 22px 22px 28px;
+}
+.contact-form h2,
+.contact-side h2 {
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
