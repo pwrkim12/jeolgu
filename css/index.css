@@ -1,25 +1,25 @@
 /* ===============================
-   절구팩토리는 (상단으로 이동, 이미지 확대)
+   절구팩토리는 (상단으로 이동, 선명도 강화)
 ================================= */
 .intro-section {
   position: relative;
   background: url('../images/22.jpg') center center / cover no-repeat;
-  height: 900px; /* ✅ 기존 720 → 900으로 확대 */
+  height: 900px; /* 유지 */
   display: flex;
   justify-content: center;
-  align-items: center; /* ✅ 이미지 정중앙 텍스트 유지 */
+  align-items: center;
   text-align: center;
   overflow: hidden;
   color: #2b2018;
 }
 
-/* ✅ 밝은 오버레이 (변화 없음) */
+/* ✅ 밝은 오버레이 조정 (더 투명하게 + blur 제거) */
 .intro-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.4); /* ✅ 기존 0.7 → 0.4로 변경 */
+  backdrop-filter: blur(1px); /* ✅ 흐림효과 약하게 줄임 (또는 완전히 제거 가능) */
   z-index: 1;
 }
 
@@ -30,6 +30,7 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
 
 /* 제목 */
 .intro-title {
