@@ -9,19 +9,25 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* ✅ 글자 흰색 유지 */
   overflow: hidden;
-  filter: brightness(0.5) grayscale(20%);
 }
 
-/* 어두운 오버레이 */
+/* ✅ 어두운 오버레이로만 배경을 어둡게 처리 */
 .about-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.65); /* ✅ 어둡게 조정 */
   z-index: 1;
 }
+
+/* ✅ 텍스트는 오버레이 위에 표시되도록 */
+.about-hero .about-content {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* 내용 박스 */
 .about-content {
