@@ -102,22 +102,25 @@
         font-size: 1.2rem;
     }
 
-/* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
-.center-box {
-  background: rgba(255, 255, 255, 0.85); /* ✅ 완전 흰색에 불투명도만 조절 */
-  border-radius: 18px;
-  padding: 24px 32px;
-  max-width: 640px;
-  line-height: 1.7;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* ✅ 살짝 그림자만 줘서 띄워 보이게 */
-}
+    /* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
+    .center-box {
+        background: rgba(255, 255, 255, 0.85);
+        /* ✅ 완전 흰색에 불투명도만 조절 */
+        border-radius: 18px;
+        padding: 24px 32px;
+        max-width: 640px;
+        line-height: 1.7;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        /* ✅ 살짝 그림자만 줘서 띄워 보이게 */
+    }
 
-.center-box p {
-  font-family: 'GmarketSansMedium';
-  font-size: 1.15rem;
-  color: #222; /* ✅ 어두운 글씨로 선명하게 */
-}
+    .center-box p {
+        font-family: 'GmarketSansMedium';
+        font-size: 1.15rem;
+        color: #222;
+        /* ✅ 어두운 글씨로 선명하게 */
+    }
 
     .hero-bottom {
         bottom: 50px;
