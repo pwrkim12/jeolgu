@@ -102,19 +102,16 @@
         font-size: 1.2rem;
     }
 
-    .center-box {
-
-        /* 중앙 반투명 박스 (밝은 투명 흰색 스타일) */
-        .center-box {
-            background: rgb(255, 255, 255);
-            /* ✅ 불투명한 흰색 (자연스럽고 따뜻한 톤) */
-            border-radius: 18px;
-            padding: 24px 32px;
-            max-width: 640px;
-            line-height: 1.7;
-            
-        }
-    }
+/* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
+.center-box {
+  background: rgba(255, 255, 255, 0.85); /* ✅ 완전 흰색에 불투명도만 조절 */
+  border-radius: 18px;
+  padding: 24px 32px;
+  max-width: 640px;
+  line-height: 1.7;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* ✅ 살짝 그림자만 줘서 띄워 보이게 */
+}
 
     .center-box p {
         font-family: 'GmarketSansMedium';
