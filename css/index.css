@@ -123,57 +123,70 @@
     
 }
 
-/* ===== 절구팩토리는 (Hero 스타일) ===== */
+/* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
 .intro-section {
   background: url('../images/back.jpg') center center / cover no-repeat;
-  height: 500px; /* ✅ 높이 조절 부분 — 이 값만 바꿔서 쉽게 조정 가능 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+  height: 800px; /* ✅ 높이 조절 가능 */
   position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ 세로 가운데 정렬 */
+  text-align: center;
   overflow: hidden;
 }
 
-/* 오버레이 (글자 가독성 향상용) */
+/* 반투명 오버레이 */
 .intro-section::before {
   content: "";
   position: absolute;
   inset: 0;
-
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
+/* 중앙 컨테이너 */
 .intro-inner {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  padding: 40px;
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 제목 */
-.intro-inner h2 {
+.intro-title {
   font-family: 'GmarketSansBold';
-  font-size: 5.6rem;
-  margin-bottom: 20px;
-  color: #000000;
-  }
-
-/* 본문 */
-.intro-inner .intro-text {
-  font-family: 'GmarketSansMedium';
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(0, 0, 0, 0.95);
+  font-size: 3.5rem; /* ✅ 크기 조절 가능 */
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.3);
 }
 
-/* 본문 (소개 문구 스타일) */
-.intro-desc p {
-  font-family: 'GmarketSansMedium';
+/* 소개 문단 */
+.intro-desc {
+  max-width: 700px;
+  text-align: left; /* ✅ 왼쪽 정렬 */
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.9;
   font-size: 1.1rem;
-  line-height: 1.9; /* ✅ 가독성 향상 */
-  color: rgba(0, 0, 0, 0.95);
-  margin-bottom: 18px;
-  letter-spacing: 0.2px;
+  font-family: 'GmarketSansMedium';
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .intro-section {
+    height: 650px;
+  }
+  .intro-title {
+    font-size: 2.2rem;
+  }
+  .intro-desc {
+    font-size: 1rem;
+    max-width: 90%;
+  }
 }
