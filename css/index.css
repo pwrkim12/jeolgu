@@ -1,5 +1,93 @@
 /* ===============================
-   HERO 섹션
+   절구팩토리는 (상단으로 이동, 중앙 정렬)
+================================= */
+.intro-section {
+  position: relative;
+  background: url('../images/22.jpg') center center / cover no-repeat;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ 이미지 정중앙에 텍스트 */
+  text-align: center;
+  overflow: hidden;
+  color: #2b2018;
+}
+
+/* ✅ 밝은 오버레이 */
+.intro-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.intro-inner {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-title {
+  font-family: 'GmarketSansBold';
+  font-size: 4rem;
+  color: #2b2018;
+  margin-bottom: 30px;
+}
+
+.intro-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #c28f57, #ffdc97);
+  margin: 14px auto 0;
+  border-radius: 3px;
+}
+
+.intro-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  color: #3a2c22;
+  line-height: 2.1;
+  font-size: 1.22rem;
+  font-family: 'GmarketSansMedium';
+  letter-spacing: 0.2px;
+}
+
+.intro-desc p {
+  margin-bottom: 24px;
+}
+
+.intro-desc strong {
+  color: #a16a1d;
+  font-weight: 700;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .intro-section {
+    height: auto;
+    padding: 100px 0;
+  }
+
+  .intro-title {
+    font-size: 2.6rem;
+  }
+
+  .intro-desc {
+    font-size: 1rem;
+    max-width: 90%;
+    line-height: 1.8;
+  }
+}
+
+/* ===============================
+   HERO 섹션 (아래로 이동)
 ================================= */
 .hero {
   position: relative;
@@ -70,100 +158,4 @@
 .hero-bottom .green {
   color: #54e04a;
   font-weight: bold;
-}
-
-/* ===============================
-   절구팩토리는 섹션
-================================= */
-.intro-section {
-  position: relative;
-  background: url('../images/22.jpg') center center / cover no-repeat;
-  min-height: 720px;
-  display: flex;
-  align-items: flex-start; /* ✅ 위로 끌어올림 */
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  color: #2b2018;
-  padding-top: 120px; /* ✅ 상단 여백 보정 */
-}
-
-/* ✅ 은은한 흰색 오버레이 */
-.intro-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.35)
-  );
-  backdrop-filter: blur(4px);
-  z-index: 1;
-}
-
-/* ✅ 텍스트 영역 */
-.intro-inner {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.intro-title {
-  font-family: 'GmarketSansBold';
-  font-size: 4rem;
-  color: #2b2018;
-  margin-bottom: 28px;
-}
-
-.intro-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #c28f57, #ffdc97);
-  margin: 14px auto 0;
-  border-radius: 3px;
-}
-
-/* ✅ 본문 수정: 문단 간격, 줄 높이 보정 */
-.intro-desc {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  color: #3a2c22;
-  line-height: 2.1;
-  font-size: 1.22rem;
-  font-family: 'GmarketSansMedium';
-  letter-spacing: 0.2px;
-}
-
-.intro-desc p {
-  margin-bottom: 24px;
-  text-indent: 0; /* ✅ 들여쓰기 제거 */
-}
-
-.intro-desc strong {
-  color: #a16a1d;
-  font-weight: 700;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .intro-section {
-    min-height: 580px;
-    padding: 100px 0;
-  }
-
-  .intro-title {
-    font-size: 2.6rem;
-  }
-
-  .intro-desc {
-    font-size: 1rem;
-    max-width: 90%;
-    line-height: 1.8;
-  }
 }
