@@ -54,7 +54,7 @@
 
 /* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
 .center-box {
-  background: rgba(255, 255, 255, 0.55); /* ✅ 흰색 배경 + 불투명도만 */
+  background: rgba(255, 255, 255, 0.45); /* ✅ 흰색 배경 + 불투명도만 */
   border-radius: 18px;
   padding: 24px 32px;
   max-width: 640px;
