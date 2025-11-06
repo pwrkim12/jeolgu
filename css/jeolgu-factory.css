@@ -338,7 +338,7 @@
   font-family: 'GmarketSansMedium';
   font-size: 1rem;
   color: #1e6eff; /* ✅ 클릭 유도 파란색 */
-  
+  text-decoration: none; /* ✅ 밑줄 제거 */
   font-weight: bold;
   transition: color 0.25s ease;
 }
