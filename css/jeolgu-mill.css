@@ -226,3 +226,22 @@
     font-size: 0.95rem;
   }
 }
+
+
+/* ===== 메뉴 소제목 (대메뉴 하단 설명문) ===== */
+.menu-subtitle {
+  font-family: 'GmarketSansMedium';
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .menu-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
