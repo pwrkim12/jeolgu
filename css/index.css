@@ -138,9 +138,10 @@
 }
 
 /* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
+/* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
 .intro-section {
-  background: url('../images/back.jpg') center center / cover no-repeat;
-  height: 500px;
+  background: url('../images/22.jpg') center center / cover no-repeat;
+  height: 500px; /* ✅ 기존 사이즈 유지 */
   position: relative;
   color: #fff;
   display: flex;
@@ -148,16 +149,21 @@
   align-items: center;
   text-align: center;
   overflow: hidden;
+
+  /* ✅ 흑백 처리 + 밝기 약간 조정 */
+  filter: grayscale(100%) brightness(0.85);
 }
 
+/* 반투명 오버레이 (배경 위에 살짝 어둡게) */
 .intro-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.3); /* ✅ 글씨 대비용 살짝 어둡게 */
   z-index: 1;
 }
 
+/* 중앙 컨테이너 (기존 그대로) */
 .intro-inner {
   position: relative;
   z-index: 2;
