@@ -1,109 +1,108 @@
-/* 기존 카드 섹션 그대로 유지 */
-.cards-3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  gap: 26px;
-  margin-top: 46px;
-}
-.card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 22px 22px 26px;
-  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.card-thumb {
-  width: 78px;
-  height: 78px;
-  border-radius: 20px;
-  background: #f4f7fe;
-  display: grid;
-  place-items: center;
-  font-size: 28px;
-  margin-bottom: 2px;
-}
-.card h3 { margin: 0; font-size: 1.15rem; }
-.card p { margin: 0; color: #4c5c78; }
-.card ul { padding-left: 18px; margin: 6px 0 0; }
-@media (max-width: 1024px) { .cards-3 { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 768px) { .cards-3 { grid-template-columns: 1fr; } }
-
-/* ✅ 하단 제품 리스트 */
 .menu-section {
-  background: #f9f7f4;
-  padding: 100px 0;
+  padding: 80px 0;
+  background: #fff;
 }
+
 .menu-category {
-  margin: 100px auto;
   width: 90%;
   max-width: 1200px;
+  margin: 0 auto;
 }
+
 .menu-title {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-family: 'GmarketSansBold';
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  color: #2e2e2e;
 }
+
 .menu-bar {
-  width: 80px;
+  width: 120px;
   height: 4px;
-  background: #b68d57;
-  border-radius: 2px;
+  background: linear-gradient(90deg, #f3c87a, #b68d57);
   margin: 0 auto 50px;
+  border-radius: 3px;
 }
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 36px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
 }
+
 .menu-card {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-  width: 100%;
-  max-width: 360px;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .menu-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
+
 .menu-img {
-  width: 45%;
-  height: 100%;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  border-radius: 16px 0 0 16px;
 }
+
 .menu-text {
-  padding: 20px 18px;
-  width: 55%;
+  padding: 18px 20px 24px;
   text-align: left;
 }
+
 .menu-text h3 {
+  font-family: 'GmarketSansBold';
   font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
+
 .menu-text p {
+  font-family: 'GmarketSansMedium';
   font-size: 0.95rem;
-  color: #4a3d34;
-  margin-bottom: 10px;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #b68d57;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #8e6b3e;
+  transform: translateY(-2px);
 }
 
 /* 반응형 */
-@media (max-width: 1024px) {
-  .menu-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 768px) {
-  .menu-grid { grid-template-columns: 1fr; }
-  .menu-card { flex-direction: column; text-align: center; }
-  .menu-img { width: 100%; height: 220px; border-radius: 16px 16px 0 0; }
-  .menu-text { width: 100%; }
+  .menu-img {
+    height: 180px;
+  }
+
+  .menu-text {
+    padding: 14px 16px 20px;
+  }
+
+  .menu-title {
+    font-size: 1.6rem;
+  }
+
+  .menu-bar {
+    margin-bottom: 36px;
+  }
 }
