@@ -139,74 +139,90 @@
 
 /* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
 .intro-section {
-    background: url('../images/back.jpg') center center / cover no-repeat;
-    height: 500px;
-    /* ✅ 높이 조절 가능 */
-    position: relative;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* ✅ 세로 가운데 정렬 */
-    text-align: center;
-    overflow: hidden;
+  background: url('../images/back.jpg') center center / cover no-repeat;
+  height: 500px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-/* 반투명 오버레이 */
 .intro-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
-/* 중앙 컨테이너 */
 .intro-inner {
-    position: relative;
-    z-index: 2;
-    width: 90%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 제목 */
 .intro-title {
-    font-family: 'GmarketSansBold';
-    font-size: 4.5rem;
-    /* ✅ 크기 조절 가능 */
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-
+  font-family: 'GmarketSansBold';
+  font-size: 4.2rem;
+  color: #faf9f6; /* 따뜻한 흰색 */
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  position: relative;
 }
 
-/* 소개 문단 */
+/* 제목 밑 라인 */
+.intro-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #f1c27d, #ffedb3);
+  margin: 14px auto 0;
+  border-radius: 3px;
+}
+
+/* 본문 */
 .intro-desc {
-    max-width: 700px;
-    text-align: left;
-    /* ✅ 왼쪽 정렬 */
-    color: rgba(255, 255, 255, 0.95);
-    line-height: 1.9;
-    font-size: 1.3rem;
-    font-family: 'GmarketSansMedium';
+  max-width: 720px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.9;
+  font-size: 1.15rem;
+  font-family: 'GmarketSansMedium';
+  margin-top: 30px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.intro-desc p {
+  margin-bottom: 18px;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
-    .intro-section {
-        height: 650px;
-    }
+  .intro-section {
+    height: auto;
+    padding: 80px 0;
+  }
 
-    .intro-title {
-        font-size: 2.2rem;
-    }
+  .intro-title {
+    font-size: 2.6rem;
+  }
 
-    .intro-desc {
-        font-size: 1rem;
-        max-width: 90%;
-    }
+  .intro-desc {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-top: 24px;
+  }
 }
