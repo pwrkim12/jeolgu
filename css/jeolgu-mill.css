@@ -169,18 +169,19 @@
   }
 }
 
-/* ===== 절구방앗간 메뉴 안내 문구 ===== */
+/* ===== 절구방앗간 메뉴 안내문 ===== */
 .menu-intro {
-  background: #fff;
+  background: linear-gradient(to bottom, #fff 0%, #fff7ef 100%);
   text-align: center;
-  padding: 90px 20px 50px;
+  padding: 80px 20px 30px; /* ✅ 아래 여백 줄임 */
+  margin-bottom: 0; /* ✅ 프랑파즈와 간격 없앰 */
 }
 
 .menu-intro h2 {
   font-family: 'GmarketSansBold';
   font-size: 2rem;
   color: #2c2c2c;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .menu-intro p {
@@ -188,18 +189,40 @@
   font-size: 1.05rem;
   color: #555;
   line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ===== 프랑파즈 제목 부분과 시각적 연결 ===== */
+.menu-section {
+  background: #fff7ef;
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+
+.menu-title {
+  text-align: center;
+  margin-top: 0;
+  font-family: 'GmarketSansBold';
+  font-size: 1.7rem;
+  color: #2c2c2c;
+}
+
+.menu-bar {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #c6934b, #e2b66d);
+  margin: 8px auto 40px;
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
   .menu-intro {
-    padding: 70px 16px 40px;
+    padding: 60px 16px 20px;
   }
-
   .menu-intro h2 {
     font-size: 1.5rem;
   }
-
   .menu-intro p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
