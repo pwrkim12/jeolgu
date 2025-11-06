@@ -1,26 +1,33 @@
 /* ============================
-   1️⃣ 절구팩토리 섹션 (밝고 쨍하게)
+   1️⃣ 절구팩토리 섹션 (쨍하지만 글자 또렷하게)
 ============================ */
 .intro-section {
+  position: relative;
   background: url('../images/22.jpg') center center / cover no-repeat;
   height: 520px;
-  position: relative;
-  color: #2b2018; /* ✅ 어두운 글씨 (밝은 배경 대비) */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  /* ✅ 쨍한 톤: 필터 제거 */
-  filter: none;
+  color: #2b2018; /* 기본 글씨 색 */
 }
 
-/* ✅ 오버레이 제거 (완전 밝게) */
+/* ✅ 글자 뒤에만 은은한 흰색+블러 오버레이 */
 .intro-section::before {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(3px); /* ✅ 배경만 부드럽게 */
+  z-index: 1;
 }
 
-/* 중앙 컨테이너 */
+/* ✅ 텍스트는 위로 */
 .intro-inner {
   position: relative;
   z-index: 2;
@@ -34,7 +41,7 @@
   font-size: 4rem;
   color: #2b2018;
   margin-bottom: 16px;
-  text-shadow: none; /* ✅ 그림자 제거 */
+  text-shadow: none;
 }
 
 .intro-title::after {
@@ -89,7 +96,6 @@
   overflow: hidden;
 }
 
-/* ✅ 어두운 오버레이 유지 (대비 강화) */
 .hero::before {
   content: "";
   position: absolute;
