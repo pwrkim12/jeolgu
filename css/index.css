@@ -126,7 +126,7 @@
 /* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
 .intro-section {
   background: url('../images/back.jpg') center center / cover no-repeat;
-  height: 400px; /* ✅ 높이 조절 가능 */
+  height: 500px; /* ✅ 높이 조절 가능 */
   position: relative;
   color: #fff;
   display: flex;
