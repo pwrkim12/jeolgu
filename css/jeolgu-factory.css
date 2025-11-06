@@ -273,3 +273,98 @@
   }
 }
 
+/* ===== 절구팩토리 추가 소개 섹션 ===== */
+.about-links {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 120px auto;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.link-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.link-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.link-img img {
+  width: 80%;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.link-text {
+  flex: 1.3;
+  color: #2e1f12;
+}
+
+.link-text .eyebrow {
+  font-family: 'GmarketSansMedium';
+  color: #a37c52;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.link-text h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: #2e1f12;
+}
+
+.link-text p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #3c2c1f;
+  margin-bottom: 20px;
+}
+
+.link-text .text-link {
+  font-family: 'GmarketSansMedium';
+  font-size: 1rem;
+  color: #a37c52;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.25s ease;
+}
+
+.link-text .text-link:hover {
+  color: #d0a86e;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .about-links {
+    gap: 60px;
+  }
+
+  .link-card,
+  .link-card.reverse {
+    flex-direction: column;
+  }
+
+  .link-img img {
+    width: 100%;
+  }
+
+  .link-text {
+    text-align: center;
+  }
+}
+
+
