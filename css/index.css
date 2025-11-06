@@ -56,7 +56,7 @@
 .center-box {
   background: rgba(255, 255, 255, 0.45); /* ✅ 흰색 배경 + 불투명도만 */
   border-radius: 18px;
-  padding: 24px 32px;
+  padding: 18px 28px;
   max-width: 640px;
   line-height: 1.7;
   text-align: center;
