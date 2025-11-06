@@ -54,13 +54,15 @@
 
 /* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
 .center-box {
-  background: rgba(255, 255, 255, 0.45); /* ✅ 흰색 배경 + 불투명도만 */
-  border-radius: 18px;
-  padding: 18px 28px;
-  max-width: 640px;
-  line-height: 1.7;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* ✅ 약간의 입체감 */
+    background: rgba(255, 255, 255, 0.45);
+    /* ✅ 흰색 배경 + 불투명도만 */
+    border-radius: 18px;
+    padding: 18px 28px;
+    max-width: 640px;
+    line-height: 1.7;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    /* ✅ 약간의 입체감 */
 }
 
 /* ✅ blur 관련 코드 삭제 (아래 2줄 완전히 제거) */
@@ -68,10 +70,12 @@
    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08); */
 
 .center-box p {
-  font-family: 'GmarketSansMedium';
-  font-size: 1.35rem;
-  color: #222; /* ✅ 검은 글씨 */
-  text-shadow: none; /* ✅ 그림자 제거 */
+    font-family: 'GmarketSansMedium';
+    font-size: 1.35rem;
+    color: #222;
+    /* ✅ 검은 글씨 */
+    text-shadow: none;
+    /* ✅ 그림자 제거 */
 }
 
 /* 하단 문구 */
@@ -138,97 +142,96 @@
 }
 
 /* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
-/* ===== 절구팩토리는 (상단 제목 + 왼쪽 설명) ===== */
 .intro-section {
-  background: url('../images/22.jpg') center center / cover no-repeat;
-  height: 500px; /* ✅ 기존 사이즈 유지 */
-  position: relative;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+    background: url('../images/22.jpg') center center / cover no-repeat;
+    height: 500px; /* ✅ 기존 사이즈 유지 */
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 
-  /* ✅ 흑백 처리 + 밝기 약간 조정 */
-  filter: grayscale(100%) brightness(0.85);
+    /* ✅ 흑백 처리 + 밝기 약간 조정 */
+    filter: grayscale(100%) brightness(0.9);
 }
 
-/* 반투명 오버레이 (배경 위에 살짝 어둡게) */
+/* ✅ 글자 가독성 향상용 반투명 오버레이 */
 .intro-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* ✅ 글씨 대비용 살짝 어둡게 */
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* ✅ 기존보다 조금 더 어두워서 글씨 대비 강화 */
+    z-index: 1;
 }
 
 /* 중앙 컨테이너 (기존 그대로) */
 .intro-inner {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 제목 */
 .intro-title {
-  font-family: 'GmarketSansBold';
-  font-size: 4.2rem;
-  color: #faf9f6; /* 따뜻한 흰색 */
-  margin-bottom: 16px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
-  position: relative;
+    font-family: 'GmarketSansBold';
+    font-size: 4.2rem;
+    color: #ffffff; /* ✅ 완전 흰색으로 변경 */
+    margin-bottom: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.45); /* ✅ 글자 대비 강화 */
+    position: relative;
 }
 
 /* 제목 밑 라인 */
 .intro-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #f1c27d, #ffedb3);
-  margin: 14px auto 0;
-  border-radius: 3px;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #f1c27d, #ffedb3);
+    margin: 14px auto 0;
+    border-radius: 3px;
 }
 
 /* 본문 */
 .intro-desc {
-  max-width: 720px;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.9;
-  font-size: 1.5rem;
-  font-family: 'GmarketSansMedium';
-  margin-top: 30px;
-  letter-spacing: 0.3px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    max-width: 720px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.98); /* ✅ 거의 순백으로 변경 */
+    line-height: 1.9;
+    font-size: 1.5rem;
+    font-family: 'GmarketSansMedium';
+    margin-top: 30px;
+    letter-spacing: 0.3px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.55); /* ✅ 글자 외곽 대비 강화 */
 }
 
 .intro-desc p {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .intro-section {
-    height: auto;
-    padding: 80px 0;
-  }
+    .intro-section {
+        height: auto;
+        padding: 80px 0;
+    }
 
-  .intro-title {
-    font-size: 2.6rem;
-  }
+    .intro-title {
+        font-size: 2.6rem;
+    }
 
-  .intro-desc {
-    font-size: 1rem;
-    max-width: 90%;
-    margin-top: 24px;
-  }
+    .intro-desc {
+        font-size: 1rem;
+        max-width: 90%;
+        margin-top: 24px;
+    }
 }
