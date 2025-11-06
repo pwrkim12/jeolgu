@@ -113,12 +113,11 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* ✅ 살짝 그림자만 줘서 띄워 보이게 */
 }
 
-    .center-box p {
-        font-family: 'GmarketSansMedium';
-        font-size: 1.15rem;
-        color: #2b2b2b;
-        /* ✅ 글자색 살짝 어두운 회색으로 대비 강화 */
-    }
+.center-box p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.15rem;
+  color: #222; /* ✅ 어두운 글씨로 선명하게 */
+}
 
     .hero-bottom {
         bottom: 50px;
