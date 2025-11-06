@@ -337,14 +337,14 @@
 .link-text .text-link {
   font-family: 'GmarketSansMedium';
   font-size: 1rem;
-  color: #a37c52;
-  text-decoration: underline;
+  color: #1e6eff; /* ✅ 클릭 유도 파란색 */
+  text-decoration: none; /* ✅ 밑줄 제거 */
   font-weight: bold;
   transition: color 0.25s ease;
 }
 
 .link-text .text-link:hover {
-  color: #d0a86e;
+  color: #0040c0; /* ✅ hover 시 진한 파란색 */
 }
 
 /* 반응형 */
