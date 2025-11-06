@@ -1,9 +1,8 @@
 /* ===== 메인 히어로 ===== */
 .hero {
-    background: url('../images/hero.jpg') center center / cover no-repeat;
-    height: 700px;
-    /* ✅ 높이 고정 — 필요 시 이 수치만 조절하면 됨 */
     position: relative;
+    background: url('../images/hero2.jpg') center center / cover no-repeat;
+    height: 700px; /* ✅ 기존 높이 그대로 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +10,22 @@
     text-align: center;
     color: #2c1f15;
     overflow: hidden;
-
 }
 
+/* ✅ 어두운 오버레이 추가 */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* ✅ 어둡게 (숫자 커질수록 어두움) */
+    z-index: 1;
+}
+
+/* ✅ hero 안의 모든 텍스트를 오버레이 위로 */
+.hero * {
+    position: relative;
+    z-index: 2;
+}
 /* 상단: 전세계 수출 / WORLD EXPORT */
 .hero-top {
 
