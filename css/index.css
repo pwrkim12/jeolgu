@@ -1,111 +1,82 @@
 /* ===== 메인 히어로 ===== */
 .hero {
-    position: relative;
-    background: url('../images/hero3.png') center center / cover no-repeat;
-    height: 700px; /* ✅ 기존 높이 그대로 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #2c1f15;
-    overflow: hidden;
+  position: relative;
+  background: url('../images/hero2.jpg') center center / cover no-repeat;
+  height: 520px; /* ✅ 기존 700 → 520 줄여서 비율 안정화 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff; /* ✅ 흰 글씨로 변경 */
+  overflow: hidden;
 }
 
 /* ✅ 어두운 오버레이 추가 */
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45); /* ✅ 어둡게 (숫자 커질수록 어두움) */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* ✅ 대비 높임 (0.45 → 0.55) */
+  z-index: 1;
 }
 
-/* ✅ hero 안의 모든 텍스트를 오버레이 위로 */
+/* ✅ hero 안의 모든 텍스트는 위로 */
 .hero * {
-    position: relative;
-    z-index: 2;
-}
-/* 상단: 전세계 수출 / WORLD EXPORT */
-.hero-top {
-
-    position: absolute;
-    top: 0px;
-    /* 위 여백 */
-    text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
+/* 상단 타이틀 */
 .hero-top h2 {
-
-    font-family: 'GmarketSansBold';
-    font-size: 3.6rem;
-    /* ✅ 크게 변경 */
-    color: #000000;
-    /* 진한 톤으로 대비 강화 */
-    margin-bottom: -10px;
-    letter-spacing: 1px;
-    text-shadow: 0 1px 2px rgb(255, 255, 255);
+  font-family: 'GmarketSansBold';
+  font-size: 3rem; /* ✅ 조금 줄임 */
+  color: #fff; /* ✅ 흰색으로 변경 */
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5); /* ✅ 그림자 추가로 선명도 향상 */
+  margin-bottom: 6px;
 }
 
+/* 영어 부제 */
 .hero-top .eng-title {
-    text-shadow: 0 1px 2px rgb(255, 255, 255);
-    font-family: 'GmarketSansMedium';
-    font-size: 1.4rem;
-    /* ✅ 영어도 키움 */
-    letter-spacing: 3px;
-    color: #000000;
-    font-weight: 600;
+  font-family: 'GmarketSansMedium';
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 3px;
 }
 
-/* 중앙 박스 (투명도 강화) */
-.hero-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 중앙 흰색 반투명 박스 (깨끗한 스타일) */
+/* 중앙 박스 */
 .center-box {
-    background: rgba(255, 255, 255, 0.45);
-    /* ✅ 흰색 배경 + 불투명도만 */
-    border-radius: 18px;
-    padding: 18px 28px;
-    max-width: 640px;
-    line-height: 1.7;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    /* ✅ 약간의 입체감 */
+  background: rgba(0, 0, 0, 0.4); /* ✅ 기존 흰 배경 → 반투명 블랙 */
+  color: #fff;
+  border-radius: 12px;
+  padding: 18px 28px;
+  max-width: 620px;
+  line-height: 1.7;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* ✅ blur 관련 코드 삭제 (아래 2줄 완전히 제거) */
-/* backdrop-filter: blur(6px);
-   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08); */
-
+/* 중앙 문단 */
 .center-box p {
-    font-family: 'GmarketSansMedium';
-    font-size: 1.35rem;
-    color: #222;
-    /* ✅ 검은 글씨 */
-    text-shadow: none;
-    /* ✅ 그림자 제거 */
+  font-family: 'GmarketSansMedium';
+  font-size: 1.15rem;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* 하단 문구 */
-.hero-bottom {
-    position: absolute;
-    bottom: 30px;
-}
-
 .hero-bottom p {
-    font-family: 'GmarketSansMedium';
-    font-size: 1.5rem;
-    color: #2c2c2c;
+  font-family: 'GmarketSansMedium';
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-bottom .green {
-    color: #54b848;
-    font-weight: bold;
+  color: #54e04a;
+  font-weight: bold;
 }
+
 
 /* ✅ 반응형 조정 (모바일 / 태블릿) */
 @media (max-width: 1024px) {
