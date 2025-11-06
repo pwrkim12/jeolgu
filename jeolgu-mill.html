@@ -1,176 +1,205 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>절구방앗간 | 메뉴 소개</title>
-
-  <!-- 공용 CSS -->
+  <title data-i18n="jeolguMill.metaTitle">절구방앗간 | 메뉴·원재료</title>
+  <!-- 공통 -->
   <link rel="stylesheet" href="css/common.css" />
-  <!-- 전용 CSS -->
+  <!-- 이 페이지 전용 -->
   <link rel="stylesheet" href="css/jeolgu-mill.css" />
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="절구팩토리" />
+      </a>
 
-  <!-- 프랑파즈 -->
-  <section class="menu-category">
-    <h2 class="menu-title">프랑파즈</h2>
-    <div class="menu-bar"></div>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/2.jpg" alt="고구마 프랑파즈" class="menu-img">
-        <div class="menu-text">
-          <h3>고구마 프랑파즈</h3>
-          <p>달콤한 고구마 앙금과 부드러운 프랑파즈의 조화</p>
-          <span class="price">3,000원</span>
-        </div>
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
+          <li><a href="jeolgu-mill.html" class="is-active" data-i18n="nav.jeolguMill">절구방앗간</a></li>
+          <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
+          <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-box desktop-lang">
+        <select class="lang-select" data-lang-select>
+          <option value="ko">🇰🇷 한국어</option>
+          <option value="en">🇺🇸 English</option>
+          <option value="ja">🇯🇵 日本語</option>
+        </select>
       </div>
-      <div class="menu-card">
-        <img src="images/3.jpg" alt="단호박 프랑파즈" class="menu-img">
-        <div class="menu-text">
-          <h3>단호박 프랑파즈</h3>
-          <p>은은한 단호박 향과 촉촉한 앙금의 만남</p>
-          <span class="price">3,200원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/4.jpg" alt="커스터드 프랑파즈" class="menu-img">
-        <div class="menu-text">
-          <h3>커스터드 프랑파즈</h3>
-          <p>진한 크림과 부드러운 떡의 완벽한 하모니</p>
-          <span class="price">3,500원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/5.jpg" alt="딸기 프랑파즈" class="menu-img">
-        <div class="menu-text">
-          <h3>딸기 프랑파즈</h3>
-          <p>상큼한 딸기 크림으로 완성된 인기 메뉴</p>
-          <span class="price">3,500원</span>
-        </div>
-      </div>
+
+      <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="drawerBackdrop" class="backdrop"></div>
+  <aside id="mobileDrawer" class="drawer" aria-hidden="true">
+    <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
+    <ul class="drawer-menu">
+      <li><a href="index.html" data-i18n="nav.home">홈</a></li>
+      <li><a href="jeolgu-factory.html" data-i18n="nav.jeolguFactory">절구팩토리</a></li>
+      <li><a href="jeolgu-mill.html" data-i18n="nav.jeolguMill">절구방앗간</a></li>
+      <li><a href="factory-familyism.html" data-i18n="nav.familyism">팩토리패밀리즘</a></li>
+      <li><a href="inquiry.html" data-i18n="nav.inquiry">문의 사항</a></li>
+      <li>
+        <label class="drawer-lang-label" for="m-lang">Language</label>
+        <select id="m-lang" class="drawer-lang-select" data-lang-select>
+          <option value="ko">🇰🇷 한국어</option>
+          <option value="en">🇺🇸 English</option>
+          <option value="ja">🇯🇵 日本語</option>
+        </select>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- 페이지 히어로 -->
+  <section class="sub-hero">
+    <div class="sub-hero-inner">
+      <p class="eyebrow" data-i18n="jeolguMill.eyebrow">절구방앗간</p>
+      <h1 data-i18n="jeolguMill.title">원재료, 가공, 패키지 정보를 한 번에</h1>
+      <p data-i18n="jeolguMill.desc">
+        실제로 떡을 만들어내는 공정, 냉동/냉장 보관 정보, 매장/촬영용 패키지 규격을 여기에 쌓으면 돼요.
+      </p>
     </div>
   </section>
 
-  <!-- 잠봉뵈르 -->
-  <section class="menu-category">
-    <h2 class="menu-title">잠봉뵈르</h2>
-    <div class="menu-bar"></div>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/6.jpg" alt="오리지널 잠봉뵈르" class="menu-img">
-        <div class="menu-text">
-          <h3>오리지널 잠봉뵈르</h3>
-          <p>쫀득한 떡 속에 잠봉햄의 풍미가 살아있어요</p>
-          <span class="price">3,800원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/7.jpg" alt="트러플 잠봉뵈르" class="menu-img">
-        <div class="menu-text">
-          <h3>트러플 잠봉뵈르</h3>
-          <p>트러플 버터 향으로 완성된 프리미엄 라인</p>
-          <span class="price">4,200원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/8.jpg" alt="갈릭 잠봉뵈르" class="menu-img">
-        <div class="menu-text">
-          <h3>갈릭 잠봉뵈르</h3>
-          <p>구운 마늘 향이 가득한 고소한 라인</p>
-          <span class="price">3,900원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/9.jpg" alt="머스타드 잠봉뵈르" class="menu-img">
-        <div class="menu-text">
-          <h3>머스타드 잠봉뵈르</h3>
-          <p>매콤한 머스타드와 햄의 조화로운 맛</p>
-          <span class="price">3,900원</span>
-        </div>
-      </div>
-    </div>
-  </section>
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f9f7f4;
+  color: #2b2018;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- 찹쌀모찌 -->
-  <section class="menu-category">
-    <h2 class="menu-title">찹쌀모찌</h2>
-    <div class="menu-bar"></div>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/10.jpg" alt="옥수수 찹쌀모찌" class="menu-img">
-        <div class="menu-text">
-          <h3>옥수수 찹쌀모찌</h3>
-          <p>고소한 옥수수 앙금이 가득한 부드러운 찹쌀떡</p>
-          <span class="price">2,500원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/11.jpg" alt="단팥 찹쌀모찌" class="menu-img">
-        <div class="menu-text">
-          <h3>단팥 찹쌀모찌</h3>
-          <p>전통 단팥의 정석, 기본에 충실한 모찌</p>
-          <span class="price">2,800원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/12.jpg" alt="고구마 찹쌀모찌" class="menu-img">
-        <div class="menu-text">
-          <h3>고구마 찹쌀모찌</h3>
-          <p>달콤한 고구마와 쫄깃한 찹쌀의 만남</p>
-          <span class="price">2,800원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/13.jpg" alt="쑥 찹쌀모찌" class="menu-img">
-        <div class="menu-text">
-          <h3>쑥 찹쌀모찌</h3>
-          <p>향긋한 쑥향이 가득한 건강한 떡</p>
-          <span class="price">3,000원</span>
-        </div>
-      </div>
-    </div>
-  </section>
+/* 메뉴 카테고리 */
+.menu-category {
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1200px;
+}
 
-  <!-- 맵떡 -->
-  <section class="menu-category">
-    <h2 class="menu-title">맵떡</h2>
-    <div class="menu-bar"></div>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/14.jpg" alt="오리지널 맵떡" class="menu-img">
-        <div class="menu-text">
-          <h3>오리지널 맵떡</h3>
-          <p>매콤달콤한 시그니처 소스의 기본 라인</p>
-          <span class="price">3,000원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/15.jpg" alt="치즈 맵떡" class="menu-img">
-        <div class="menu-text">
-          <h3>치즈 맵떡</h3>
-          <p>고소한 치즈가 더해진 매운 떡</p>
-          <span class="price">3,500원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/16.jpg" alt="핵불 맵떡" class="menu-img">
-        <div class="menu-text">
-          <h3>핵불 맵떡</h3>
-          <p>화끈하게 매운 불맛의 매력!</p>
-          <span class="price">3,800원</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="images/17.jpg" alt="마요 맵떡" class="menu-img">
-        <div class="menu-text">
-          <h3>마요 맵떡</h3>
-          <p>마요네즈로 부드럽게 잡아주는 크리미 매운맛</p>
-          <span class="price">3,500원</span>
-        </div>
-      </div>
-    </div>
-  </section>
+/* 제목 */
+.menu-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* 하이라이트 바 */
+.menu-bar {
+  width: 80px;
+  height: 4px;
+  background: #b68d57; /* 브랜드 포인트 컬러 */
+  border-radius: 2px;
+  margin: 0 auto 50px;
+}
+
+/* 카드 그리드 */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+  justify-items: center;
+}
+
+/* 카드 */
+.menu-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 이미지 */
+.menu-img {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+/* 텍스트 */
+.menu-text {
+  padding: 20px 18px;
+  width: 55%;
+  text-align: left;
+}
+
+.menu-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.menu-text p {
+  font-size: 0.95rem;
+  color: #4a3d34;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.price {
+  font-weight: 700;
+  color: #b68d57;
+  font-size: 1.05rem;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-img {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px 16px 0 0;
+  }
+  .menu-text {
+    width: 100%;
+  }
+}
+
+
+  <footer class="footer">
+    <p>© 2025 2STO Clone. All rights reserved.</p>
+    <p>서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
+    <p>TEL. 02-1234-5678, E-mail. info@2sto.com</p>
+  </footer>
+
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/nav.js"></script>
+
 
 </body>
+
 </html>
