@@ -106,7 +106,7 @@
 
         /* 중앙 반투명 박스 (밝은 투명 흰색 스타일) */
         .center-box {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgb(255, 255, 255);
             /* ✅ 불투명한 흰색 (자연스럽고 따뜻한 톤) */
             border-radius: 18px;
             padding: 24px 32px;
