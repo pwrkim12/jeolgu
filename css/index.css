@@ -77,7 +77,7 @@
 /* 하단 문구 */
 .hero-bottom {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 }
 
 .hero-bottom p {
