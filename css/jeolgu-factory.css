@@ -191,21 +191,29 @@
 
 /* ===== 스토리 카드 섹션 ===== */
 .story-cards {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin: 80px auto;
+  margin: 0 auto;
+  padding: 100px 0;
   width: 90%;
   max-width: 1100px;
+
+  /* ✅ 섹션 전체 배경 */
+  background: url('../images/back.jpg') center center / cover no-repeat;
+  background-attachment: fixed; /* ✅ 스크롤 시 고정 효과 (선택사항) */
 }
 
+/* 카드 개별 */
 .card {
   display: flex;
   align-items: center;
-  background: url('../images/back.jpg') center center / cover no-repeat;
+  background: rgba(255, 255, 255, 0.88); /* ✅ 반투명 흰색 */
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
 }
 
 .card.reverse {
@@ -224,8 +232,6 @@
   padding: 40px 50px;
   text-align: left;
   color: #2e1f12;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
 }
 
 .card-text h3 {
