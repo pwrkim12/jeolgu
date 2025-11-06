@@ -111,8 +111,7 @@
             border-radius: 18px;
             padding: 24px 32px;
            
-            -webkit-backdrop-filter: blur(8px);
-            /* 사파리 호환 */
+           
             max-width: 640px;
             line-height: 1.7;
             
