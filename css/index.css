@@ -1,10 +1,10 @@
 /* ===============================
-   절구팩토리는 (상단으로 이동, 선명도 강화)
+   절구팩토리는 (글자 가독성 강화)
 ================================= */
 .intro-section {
   position: relative;
   background: url('../images/22.jpg') center center / cover no-repeat;
-  height: 900px; /* 유지 */
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,31 +13,37 @@
   color: #2b2018;
 }
 
-/* ✅ 밝은 오버레이 조정 (더 투명하게 + blur 제거) */
+/* ✅ 오버레이: 밝은 흰색 → 살짝 어두운 투명 베이지 톤 */
 .intro-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.4); /* ✅ 기존 0.7 → 0.4로 변경 */
-  backdrop-filter: blur(1px); /* ✅ 흐림효과 약하게 줄임 (또는 완전히 제거 가능) */
+  background: rgba(245, 235, 220, 0.55); /* ✅ 따뜻한 톤 + 투명도 조정 */
+  backdrop-filter: blur(1px);
   z-index: 1;
 }
 
+/* ✅ 텍스트 컨테이너 (글자 대비 강화용 반투명 배경) */
 .intro-inner {
   position: relative;
   z-index: 2;
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.55); /* ✅ 글자 뒤 살짝 밝은 막 */
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 }
-
 
 /* 제목 */
 .intro-title {
   font-family: 'GmarketSansBold';
-  font-size: 4.4rem; /* ✅ 약간 확대 */
+  font-size: 4.4rem;
   color: #2b2018;
   margin-bottom: 30px;
+  text-shadow: 0 3px 8px rgba(255, 255, 255, 0.6); /* ✅ 하이라이트 그림자 */
 }
 
 /* 본문 */
@@ -45,12 +51,18 @@
   max-width: 820px;
   margin: 0 auto;
   text-align: left;
-  color: #3a2c22;
-  line-height: 2.1;
-  font-size: 1.25rem;
+  color: #2a1c0f; /* ✅ 더 진한 글자색 */
+  line-height: 2;
+  font-size: 1.2rem;
   font-family: 'GmarketSansMedium';
-  letter-spacing: 0.2px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6); /* ✅ 글자 가장자리 빛 반사 */
 }
+
+.intro-desc strong {
+  color: #a16a1d;
+  font-weight: 700;
+}
+
 
 /* ✅ 모바일 최적화 */
 @media (max-width: 768px) {
