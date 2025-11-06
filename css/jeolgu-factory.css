@@ -335,17 +335,25 @@
 }
 
 .link-text .text-link {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #1e6eff; /* 기본 파란색 */
+  color: #fff;
   font-family: 'GmarketSansMedium';
-  font-size: 1rem;
-  color: #1e6eff; /* ✅ 클릭 유도 파란색 */
-  text-decoration: none; /* ✅ 밑줄 제거 */
-  font-weight: bold;
-  transition: color 0.25s ease;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .link-text .text-link:hover {
-  color: #0040c0; /* ✅ hover 시 진한 파란색 */
+  background: #0040c0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 /* 반응형 */
 @media (max-width: 1024px) {
