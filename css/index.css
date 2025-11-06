@@ -69,7 +69,7 @@
 
 .center-box p {
   font-family: 'GmarketSansMedium';
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #222; /* ✅ 검은 글씨 */
   text-shadow: none; /* ✅ 그림자 제거 */
 }
