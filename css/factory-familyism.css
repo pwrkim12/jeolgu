@@ -279,23 +279,28 @@
   margin-top: 10px;
 }
 
-/* ===== 표 하단 설명 강조 ===== */
+/* ===== 표 하단 설명 강조 (업데이트 버전) ===== */
 .note {
   text-align: center;
   font-family: 'GmarketSansMedium';
-  font-size: 2.5rem;
-  color: #7c6a4b;
-  margin-top: 40px;
-  line-height: 1.8;
+  font-size: 2rem;  /* 전체 글자 크기 크게 */
+  color: #4e3c2a;
+  margin-top: 60px;
+  line-height: 1.6;
+}
+
+.note strong,
+.note span {
+  font-size: inherit; /* ✅ 부모 폰트 크기 그대로 상속 */
 }
 
 .note .highlight {
   color: #b68d57; /* 브랜드 포인트 컬러 */
   font-family: 'GmarketSansBold';
-  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .note .emphasis {
-  color: #4e3c2a;
+  color: #2c1a0a;
   font-weight: 600;
 }
