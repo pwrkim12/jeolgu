@@ -74,7 +74,7 @@
     const scriptURL = "https://script.google.com/macros/s/AKfycbze9007QkUKW6Ao88KLT5cHw_BcBY6hNFdWx-bEi0oLBmbvjK6GqqcUuvY_dnvxA1RB/exec";
 
     // ✅ 문의 폼 전송 처리
-    document.querySelector(".inquiry-form").addEventListener("submit", e => {
+    document.querySelector("inquiryForm").addEventListener("submit", e => {
       e.preventDefault(); // 폼 새로고침 방지
 
       fetch(scriptURL, {
