@@ -77,46 +77,79 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* 표 스타일 */
-.franchise-table table {
+/* ===== 프랜차이즈 비용표 ===== */
+.highlight-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
   font-family: 'GmarketSansMedium';
+  margin-top: 30px;
 }
 
-.franchise-table th {
-  background: #f3c87a;
+.highlight-table th {
+  background: #e67e22;
   color: #fff;
   padding: 14px;
   text-align: center;
   font-size: 1.05rem;
 }
 
-.franchise-table td {
-  border: 1px solid #e8d7b9;
+.highlight-table td {
+  border: 1px solid #ddd0b0;
   text-align: center;
   padding: 12px 10px;
   color: #333;
 }
 
-.franchise-table .note {
+.highlight-table tr:nth-child(even) {
+  background: #fffaf2;
+}
+
+/* 빨간 줄 효과 */
+.strike-text {
+  position: relative;
+  display: inline-block;
+  color: #555;
+}
+.strike-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  width: 110%;
+  height: 2px;
+  background: #e74c3c;
+  transform: rotate(-5deg);
+}
+
+/* 강조 줄 */
+.merged-row td {
+  background: #f8c471;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
   text-align: center;
-  margin-top: 30px;
+}
+
+/* 합계 강조 */
+.total {
+  background: #e67e22;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 작은 설명 */
+.note {
+  text-align: center;
+  margin-top: 20px;
   font-size: 1rem;
   color: #777;
   line-height: 1.6;
 }
 
 /* 반응형 */
-@media (max-width: 1024px) {
-  .split-inner {
-    grid-template-columns: 1fr;
-  }
-  .fa-hero {
-    height: 380px;
-  }
-  .fa-hero h1 {
-    font-size: 1.8rem;
+@media (max-width: 768px) {
+  .highlight-table th, .highlight-table td {
+    font-size: 0.9rem;
+    padding: 10px 6px;
   }
 }
