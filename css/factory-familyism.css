@@ -126,7 +126,7 @@
 
 /* 강조줄 (연한 골드) */
 .merged-row td {
-  background: #f3c87a;
+   background: #b68d57; /* 골드브라운 */
   color: #fff;
   font-weight: bold;
   padding: 10px;
