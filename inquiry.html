@@ -64,25 +64,26 @@
 
     <section class="section">
       <div class="container inquiry-wrap">
-        <form class="inquiry-form">
+        <form class="inquiry-form" action="mailto:pwrkim12@naver.com" method="POST" enctype="text/plain">
           <label>
             이름 / 업체명
-            <input type="text" name="name" required />
+            <input type="text" name="이름" required />
           </label>
           <label>
             연락처
-            <input type="tel" name="phone" required />
+            <input type="tel" name="연락처" required />
           </label>
           <label>
             이메일
-            <input type="email" name="email" />
+            <input type="email" name="이메일" />
           </label>
           <label>
             문의 내용
-            <textarea name="message" rows="6" placeholder="어떤 협업/납품을 원하시나요?"></textarea>
+            <textarea name="문의내용" rows="6" placeholder="어떤 협업/납품을 원하시나요?"></textarea>
           </label>
           <button type="submit" class="btn-primary">보내기</button>
         </form>
+
       </div>
     </section>
   </main>
