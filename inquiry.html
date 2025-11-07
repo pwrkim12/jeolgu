@@ -5,15 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>문의 사항</title>
-
-  <!-- 공통 -->
   <link rel="stylesheet" href="css/common.css" />
-  <!-- 전용 -->
   <link rel="stylesheet" href="css/inquiry.css" />
 </head>
 
 <body>
-  <!-- 헤더 -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
@@ -28,37 +24,10 @@
           <li><a href="inquiry.html" class="is-active">문의 사항</a></li>
         </ul>
       </nav>
-
-      <div class="lang-box desktop-lang">
-        <select class="lang-select" data-lang-select>
-          <option value="ko">🇰🇷 한국어</option>
-          <option value="en">🇺🇸 English</option>
-          <option value="ja">🇯🇵 日本語</option>
-        </select>
-      </div>
-
-      <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- 모바일 드로어 -->
-  <div id="drawerBackdrop" class="backdrop"></div>
-  <aside id="mobileDrawer" class="drawer" aria-hidden="true">
-    <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
-    <ul class="drawer-menu">
-      <li><a href="index.html">홈</a></li>
-      <li><a href="jeolgu-factory.html">절구팩토리</a></li>
-      <li><a href="jeolgu-mill.html">절구방앗간</a></li>
-      <li><a href="factory-familyism.html">팩토리패밀리즘</a></li>
-      <li><a href="inquiry.html">문의 사항</a></li>
-    </ul>
-  </aside>
-
-  <!-- 메인 -->
   <main>
-    <!-- 상단 히어로 섹션 -->
     <section class="inquiry-hero">
       <div class="inquiry-overlay"></div>
       <div class="inquiry-content">
@@ -68,28 +37,27 @@
       </div>
     </section>
 
-    <!-- 문의폼 -->
     <section class="inquiry-form-section">
       <div class="inquiry-card">
-        <form action="mailto:pwrkim12@naver.com" method="POST" enctype="text/plain">
+        <form id="inquiryForm">
           <div class="form-group">
             <label for="name">이름 / 업체명</label>
-            <input type="text" id="name" name="이름" placeholder="이름 또는 업체명을 입력하세요" required />
+            <input type="text" id="name" name="name" required />
           </div>
 
           <div class="form-group">
             <label for="phone">연락처</label>
-            <input type="tel" id="phone" name="연락처" placeholder="010-0000-0000" required />
+            <input type="tel" id="phone" name="phone" required />
           </div>
 
           <div class="form-group">
             <label for="email">이메일</label>
-            <input type="email" id="email" name="이메일" placeholder="example@email.com" required />
+            <input type="email" id="email" name="email" />
           </div>
 
           <div class="form-group">
             <label for="message">문의 내용</label>
-            <textarea id="message" name="문의내용" rows="6" placeholder="어떤 협업 또는 납품을 원하시나요?" required></textarea>
+            <textarea id="message" name="message" rows="6" placeholder="어떤 협업 또는 납품을 원하시나요?" required></textarea>
           </div>
 
           <button type="submit" class="submit-btn">보내기</button>
@@ -98,15 +66,19 @@
     </section>
   </main>
 
-  <!-- 푸터 -->
   <footer class="footer">
     <p>© 2025 절구팩토리. All rights reserved.</p>
-    <p>서울특별시 강남구 테헤란로 123, 절구팩토리 빌딩 6층</p>
-    <p>TEL. 02-1234-5678 · E-mail. info@jeolgu.com</p>
   </footer>
 
-  <script defer src="js/i18n.js"></script>
-  <script defer src="js/nav.js"></script>
-</body>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/여기에_웹앱_URL/exec";
 
+    document.getElementById("inquiryForm").addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(e.target) })
+        .then(res => alert("✅ 문의가 정상적으로 접수되었습니다!"))
+        .catch(err => alert("❌ 오류가 발생했습니다. 다시 시도해주세요."));
+    });
+  </script>
+</body>
 </html>
