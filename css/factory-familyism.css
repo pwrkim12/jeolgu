@@ -404,3 +404,65 @@
   }
 }
 
+/* ===== 브랜드 가치 / 사회공헌 섹션 (배경형) ===== */
+.brand-hero {
+  position: relative;
+  background: url('../images/jo.jpg') center center / cover no-repeat;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 반투명 어두운 레이어 */
+.brand-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* 본문 내용 */
+.brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+}
+
+.brand-content h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.brand-content p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .brand-hero {
+    min-height: 440px;
+    padding: 60px 16px;
+  }
+
+  .brand-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .brand-content p {
+    font-size: 0.95rem;
+  }
+}
+
