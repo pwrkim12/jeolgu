@@ -306,90 +306,101 @@
 }
 
 
-/* ===== 장인 시공 소개 섹션 ===== */
-.artisan-section {
-  background: linear-gradient(to bottom, #fffaf5, #fff7ef);
-  padding: 80px 20px 100px;
-}
-
-.artisan-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: start;
-}
-
-.artisan-text h3 {
-  font-family: 'GmarketSansBold';
-  font-size: 1.5rem;
-  color: #3a2e1f;
-  margin-bottom: 18px;
-}
-
-.artisan-text ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.artisan-text li {
-  font-family: 'GmarketSansMedium';
-  color: #5b4a36;
-  font-size: 1rem;
-  line-height: 1.8;
+/* ===== 장인 인테리어 섹션 (배경형 통합버전) ===== */
+.artisan-hero {
   position: relative;
-  padding-left: 12px;
-}
-
-.artisan-text li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #b68d57;
-}
-
-/* 오른쪽 문구 영역 */
-.artisan-quote {
+  background: url('../images/sam.jpg') center center / cover no-repeat;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 어두운 오버레이 */
+.artisan-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.artisan-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+}
+
+.artisan-content h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.artisan-content p {
   font-family: 'GmarketSansMedium';
-  color: #3e2d20;
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.artisan-quote .quote-text {
-  font-size: 1.1rem;
-  line-height: 2;
+/* 장인 인용문 박스 */
+.artisan-quote-box {
+  background: rgba(255, 255, 255, 0.9);
   color: #3b2b1c;
-  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-top: 36px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.artisan-quote strong {
+.artisan-quote-box .quote {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.artisan-quote-box strong {
   color: #b68d57;
 }
 
-.artisan-quote .signature {
+.artisan-quote-box .signature {
+  text-align: right;
   font-family: 'GmarketSansBold';
-  color: #4e3c2a;
-  font-size: 1rem;
+  color: #5a4631;
+}
+
+.artisan-quote-box .sub-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #7c6a4b;
   margin-top: 10px;
 }
 
-.artisan-quote .note {
-  font-size: 0.9rem;
-  color: #6c5a45;
-  margin-top: 16px;
-  line-height: 1.6;
-}
-
-/* 반응형 */
+/* 반응형 대응 */
 @media (max-width: 768px) {
-  .artisan-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .artisan-hero {
+    min-height: 480px;
+    padding: 60px 16px;
+  }
+  .artisan-content h2 {
+    font-size: 1.6rem;
+  }
+  .artisan-content p {
+    font-size: 0.95rem;
+  }
+  .artisan-quote-box {
+    padding: 22px 20px;
   }
 }
+
