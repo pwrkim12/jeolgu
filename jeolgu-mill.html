@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- 헤더 -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
@@ -27,7 +26,7 @@
       </nav>
 
       <div class="lang-box desktop-lang">
-        <select id="languageSelect" class="lang-select">
+        <select class="lang-select" data-lang-select>
           <option value="ko">🇰🇷 한국어</option>
           <option value="en">🇺🇸 English</option>
           <option value="ja">🇯🇵 日本語</option>
@@ -40,143 +39,130 @@
     </div>
   </header>
 
-  <!-- 절구방앗간 히어로 섹션 -->
+  <!-- 히어로 -->
   <section class="mill-hero">
     <div class="mill-hero-overlay"></div>
     <div class="mill-hero-inner">
       <p class="eyebrow">JEOLGU MILL</p>
       <h1 data-i18n="hero.title">전통의 떡을 현대적으로 빚는 절구방앗간</h1>
-      <p data-i18n="hero.text">
+      <p data-i18n="hero.desc">
         절구방앗간은 전국 각지에서 들어온 원재료로, 수제 떡의 맛과 정성을 그대로 담아냅니다.<br>
         프랑파즈부터 찹쌀모찌까지, 모든 메뉴는 한 입의 감동을 전하기 위해 연구하고 있습니다.
       </p>
     </div>
   </section>
 
-  <!-- 절구방앗간 안내 문구 -->
   <section class="menu-intro">
     <div class="menu-intro-inner">
       <h2 data-i18n="intro.title">절구방앗간의 모든 메뉴를 만나보세요</h2>
-      <p data-i18n="intro.text">
+      <p data-i18n="intro.desc">
         각 메뉴는 전통과 현대가 어우러진 수제 방식으로 정성스럽게 빚어집니다.<br>
         아래에서 절구방앗간의 대표 메뉴들을 살펴보세요.
       </p>
     </div>
 
-    <!-- 제품 메뉴 섹션 -->
     <main>
 
-      <!-- 프랑파즈 -->
-      <section class="menu-section" data-i18n-section="frangpaz">
+      <!-- 🟤 프랑파즈 -->
+      <section class="menu-section">
         <div class="menu-category">
-          <h2 class="menu-title" data-i18n="frangpaz.title">프랑파즈</h2>
-          <p class="menu-subtitle" data-i18n="frangpaz.subtitle">고소한 버터와 달콤한 팥이 어우러진 부드럽고 풍미 깊은 수제 떡</p>
+          <h2 class="menu-title" data-i18n="menu.frangpaz.title">프랑파즈</h2>
+          <p class="menu-subtitle" data-i18n="menu.frangpaz.subtitle">고소한 버터와 달콤한 팥이 어우러진 부드럽고 풍미 깊은 수제 떡</p>
           <div class="menu-bar"></div>
           <div class="menu-grid">
+
+            <!-- 반복 구조 동일 -->
             <div class="menu-card">
-              <img src="images/3.jpg" class="menu-img" alt="고구마 프랑파즈">
+              <img src="images/3.jpg" class="menu-img" alt="고구마 프랑파즈" />
               <div class="menu-text">
-                <h3 data-i18n="frangpaz.1.name">고구마 프랑파즈</h3>
-                <p data-i18n="frangpaz.1.desc">달콤한 고구마의 만남, 부드럽게 녹아드는 한입, 따뜻한 달콤함이 마음을 감싸요.</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
+                <h3 data-i18n="menu.frangpaz.item1.name">고구마 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item1.desc">달콤한 고구마의 만남, 부드럽게 녹아드는 한입, 따뜻한 달콤함이 마음을 감싸요.</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
               </div>
             </div>
             <div class="menu-card">
-              <img src="images/4.jpg" class="menu-img" alt="단호박 프랑파즈">
+              <img src="images/4.jpg" class="menu-img" alt="단호박 프랑파즈" />
               <div class="menu-text">
-                <h3 data-i18n="frangpaz.2.name">단호박 프랑파즈</h3>
-                <p data-i18n="frangpaz.2.desc">단호박의 풍미와 버터의 고소함이 색다른 달콤함으로 누구나 즐기기 좋은 부드러운 떡</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
+                <h3 data-i18n="menu.frangpaz.item2.name">단호박 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item2.desc">단호박의 풍미와 버터의 고소함이 색다른 달콤함으로 누구나 즐기기 좋은 부드러운 떡</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
               </div>
             </div>
             <div class="menu-card">
-              <img src="images/2.jpg" class="menu-img" alt="쑥 프랑파즈">
+              <img src="images/2.jpg" class="menu-img" alt="쑥 프랑파즈" />
               <div class="menu-text">
-                <h3 data-i18n="frangpaz.3.name">쑥 프랑파즈</h3>
-                <p data-i18n="frangpaz.3.desc">풋풋한 쑥과 신선한 버터향이 달콤한 팥의 만남으로 새로운 맛을 즐길수 있는 떡</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
+                <h3 data-i18n="menu.frangpaz.item3.name">쑥 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item3.desc">풋풋한 쑥과 신선한 버터향이 달콤한 팥의 만남으로 새로운 맛을 즐길수 있는 떡</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
+              </div>
+            </div>
+            <div class="menu-card">
+              <img src="images/44.jpg" class="menu-img" alt="커스터드 고구마 프랑파즈" />
+              <div class="menu-text">
+                <h3 data-i18n="menu.frangpaz.item4.name">커스터드 고구마 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item4.desc">진한 고구마와 부드러운 커스터드가 어우러져 달콤한 여운이 남는 특별한 떡</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
+              </div>
+            </div>
+            <div class="menu-card">
+              <img src="images/45.jpg" class="menu-img" alt="커스터드 단호박 프랑파즈" />
+              <div class="menu-text">
+                <h3 data-i18n="menu.frangpaz.item5.name">커스터드 단호박 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item5.desc">달콤한 단호박과 고소한 커스터드가 만나 부드럽게 녹아드는 황금빛 디저트</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
+              </div>
+            </div>
+            <div class="menu-card">
+              <img src="images/46.jpg" class="menu-img" alt="커스터드 쑥 프랑파즈" />
+              <div class="menu-text">
+                <h3 data-i18n="menu.frangpaz.item6.name">커스터드 쑥 프랑파즈</h3>
+                <p data-i18n="menu.frangpaz.item6.desc">은은한 쑥향에 부드러운 커스터드가 더해져 달콤하고 고소한 한입의 즐거움</p>
+                <a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 찹쌀모찌 -->
-      <section class="menu-section" data-i18n-section="mochi">
+      <!-- 🟤 찹쌀모찌 -->
+      <section class="menu-section">
         <div class="menu-category">
-          <h2 class="menu-title" data-i18n="mochi.title">찹쌀모찌</h2>
-          <p class="menu-subtitle" data-i18n="mochi.subtitle">남녀노소 누구나 좋아하는 쫄깃하고 달콤한 최고의 디저트</p>
+          <h2 class="menu-title" data-i18n="menu.mochi.title">찹쌀모찌</h2>
+          <p class="menu-subtitle" data-i18n="menu.mochi.subtitle">남녀노소 누구나 좋아하는 쫄깃하고 달콤한 최고의 디저트</p>
           <div class="menu-bar"></div>
           <div class="menu-grid">
-            <div class="menu-card">
-              <img src="images/35.jpg" class="menu-img" alt="옥수수 찹쌀모찌">
-              <div class="menu-text">
-                <h3 data-i18n="mochi.1.name">옥수수 찹쌀모찌</h3>
-                <p data-i18n="mochi.1.desc">자연이 주는 달콤함, 전통의 맛과 건강함을 동시에 즐길 수 있는 옥수수 찹쌀떡</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
-              </div>
-            </div>
-            <div class="menu-card">
-              <img src="images/36.jpg" class="menu-img" alt="딸기 찹쌀모찌">
-              <div class="menu-text">
-                <h3 data-i18n="mochi.2.name">딸기 찹쌀모찌</h3>
-                <p data-i18n="mochi.2.desc">쫀득한 찹쌀과 상큼한 딸기 크림이 만나 특별한 맛을 완성 합니다.</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
-              </div>
-            </div>
+            <div class="menu-card"><img src="images/35.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.mochi.item1.name">옥수수 찹쌀모찌</h3><p data-i18n="menu.mochi.item1.desc">자연이 주는 달콤함, 전통의 맛과 건강함을 동시에 즐길 수 있는 옥수수 찹쌀떡</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/36.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.mochi.item2.name">딸기 찹쌀모찌</h3><p data-i18n="menu.mochi.item2.desc">쫀득한 찹쌀과 상큼한 딸기 크림이 만나 특별한 맛을 완성 합니다.</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/37.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.mochi.item3.name">초코 찹쌀모찌</h3><p data-i18n="menu.mochi.item3.desc">쫀득한 떡속 달콤한 초콜릿과 바삭한 칩의 만남, 전통 떡에 달콤함과 재미를 담았습니다.</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/38.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.mochi.item4.name">밤 크림 모찌</h3><p data-i18n="menu.mochi.item4.desc">고소한 밤과 쫀득한 찹쌀떡이 만나 깊고 풍부한 맛을 선사합니다.</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/39.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.mochi.item5.name">고구마 크림 모찌</h3><p data-i18n="menu.mochi.item5.desc">부드러운 고구마 크림의 달콤함, 전통의 맛과 크리미한 풍미를 동시에 즐길 수 있는 찹쌀떡</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
           </div>
         </div>
       </section>
 
-      <!-- 잠봉뵈르 -->
-      <section class="menu-section" data-i18n-section="jambon">
+      <!-- 🟤 잠봉뵈르 -->
+      <section class="menu-section">
         <div class="menu-category">
-          <h2 class="menu-title" data-i18n="jambon.title">잠봉뵈르</h2>
-          <p class="menu-subtitle" data-i18n="jambon.subtitle">짭조름한 햄과 담백한 떡의 조화, 단짠단짠의 완벽한 밸런스</p>
+          <h2 class="menu-title" data-i18n="menu.ham.title">잠봉뵈르</h2>
+          <p class="menu-subtitle" data-i18n="menu.ham.subtitle">짭조름한 햄과 담백한 떡의 조화, 단짠단짠의 완벽한 밸런스</p>
           <div class="menu-bar"></div>
           <div class="menu-grid">
-            <div class="menu-card">
-              <img src="images/47.jpg" class="menu-img" alt="쑥 잠봉뵈르">
-              <div class="menu-text">
-                <h3 data-i18n="jambon.1.name">쑥 잠봉뵈르</h3>
-                <p data-i18n="jambon.1.desc">향긋한 쑥 향 사이로 퍼지는 햄의 짭조름함이 묘한 중독을 부르는 맛</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
-              </div>
-            </div>
+            <div class="menu-card"><img src="images/47.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.ham.item1.name">쑥 잠봉뵈르</h3><p data-i18n="menu.ham.item1.desc">향긋한 쑥 향 사이로 퍼지는 햄의 짭조름함이 묘한 중독을 부르는 맛</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/48.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.ham.item2.name">고구마 잠봉뵈르</h3><p data-i18n="menu.ham.item2.desc">부드럽고 달콤한 고구마 속 짭짤한 햄의 포인트가 어우러진 색다른 조화</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/49.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.ham.item3.name">단호박 잠봉뵈르</h3><p data-i18n="menu.ham.item3.desc">단호박의 달큰함과 짭조름한 햄의 조화가 만들어내는 단짠의 완성</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
           </div>
         </div>
       </section>
 
-      <!-- 맵떡 -->
-      <section class="menu-section" data-i18n-section="maeptteok">
+      <!-- 🟤 맵떡 -->
+      <section class="menu-section">
         <div class="menu-category">
-          <h2 class="menu-title" data-i18n="maeptteok.title">맵떡</h2>
-          <p class="menu-subtitle" data-i18n="maeptteok.subtitle">전통 방식으로 빚어낸 가장 한국적인 달콤한 한국식 수제 떡</p>
+          <h2 class="menu-title" data-i18n="menu.traditional.title">맵떡</h2>
+          <p class="menu-subtitle" data-i18n="menu.traditional.subtitle">전통 방식으로 빚어낸 가장 한국적인 달콤한 한국식 수제 떡</p>
           <div class="menu-bar"></div>
           <div class="menu-grid">
-            <div class="menu-card">
-              <img src="images/16.jpg" class="menu-img" alt="인절미">
-              <div class="menu-text">
-                <h3 data-i18n="maeptteok.1.name">인절미</h3>
-                <p data-i18n="maeptteok.1.desc">전통의 맛을 담은 담백 쫀득한고소함과 부드러움이 조화로운 인절미</p>
-                <a href="coming-soon.html" class="buy-btn" data-i18n="btn.buy">구매하러 가기</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- 푸터 -->
-    <footer class="footer">
-      <p data-i18n="footer.copy">© 2025 절구팩토리. All rights reserved.</p>
-      <p data-i18n="footer.addr">서울특별시 강남구 테헤란로 123, 절구팩토리 빌딩 6층</p>
-      <p data-i18n="footer.contact">TEL. 02-1234-5678 | E-mail. info@jeolgu.com</p>
-    </footer>
-
-    <script defer src="js/nav.js"></script>
-    <script defer src="js/i18n.js"></script>
-</body>
-
-</html>
+            <div class="menu-card"><img src="images/16.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.traditional.item1.name">인절미</h3><p data-i18n="menu.traditional.item1.desc">전통의 맛을 담은 담백 쫀득한 고소함과 부드러움이 조화로운 인절미</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/13.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.traditional.item2.name">증편</h3><p data-i18n="menu.traditional.item2.desc">전통의 맛, 한입에 담았습니다. 푹신한 식감과 자연스러운 단맛이 조화로운 증편</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/14.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.traditional.item3.name">단호박 설기</h3><p data-i18n="menu.traditional.item3.desc">푹신한 설기속 달콤한 단호박의 풍미 건강함과 전통의 맛을 한입에 담았습니다.</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/15.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.traditional.item4.name">쑥 설기</h3><p data-i18n="menu.traditional.item4.desc">쫀득하고 촉촉한 설기속 향긋한 쑥의 맛, 전통의 풍미와 건강함을 담은 한 입 간식</p><a href="coming-soon.html" class="buy-btn" data-i18n="menu.buy">구매하러 가기</a></div></div>
+            <div class="menu-card"><img src="images/12.jpg" class="menu-img" alt=""><div class="menu-text"><h3 data-i18n="menu.traditional.item5.name">앙금 절편</h3><p data-i18n="menu.traditional.item5.desc">
