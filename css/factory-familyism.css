@@ -404,16 +404,27 @@
   }
 }
 
-/* ===== 브랜드 철학 (카드형 디자인) ===== */
+/* ===== 브랜드 철학 (카드형 + 배경이미지 버전) ===== */
 .brand-card-section {
-  background: linear-gradient(to bottom, #fffaf5, #fff7ef);
-  padding: 120px 20px;
+  background: url('../images/back.jpg') center center / cover no-repeat;
+  padding: 140px 20px;
+  position: relative;
+}
+
+.brand-card-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 250, 245, 0.7); /* 살짝 밝은 오버레이로 카드와 어울림 */
+  z-index: 1;
 }
 
 .brand-card {
+  position: relative;
+  z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: grid;
@@ -421,6 +432,7 @@
   gap: 50px;
   padding: 60px;
   align-items: center;
+  backdrop-filter: blur(6px); /* ✅ 약한 유리질감 */
 }
 
 .brand-photo img {
@@ -442,34 +454,4 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #b68d57;
-  margin-top: 10px;
-  border-radius: 2px;
-}
-
-.brand-text p {
-  font-family: 'GmarketSansMedium';
-  font-size: 1.05rem;
-  color: #4e3c2a;
-  line-height: 1.9;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .brand-card {
-    grid-template-columns: 1fr;
-    padding: 40px 24px;
-  }
-
-  .brand-text {
-    text-align: center;
-  }
-
-  .brand-text h2 {
-    font-size: 1.6rem;
-  }
-
-  .brand-text p {
-    font-size: 0.95rem;
-  }
-}
+  background: #b68d5
