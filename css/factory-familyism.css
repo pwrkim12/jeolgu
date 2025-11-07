@@ -165,3 +165,68 @@
     padding: 10px 6px;
   }
 }
+
+/* ===== 창업혜택 섹션 ===== */
+.franchise-benefit {
+  background: linear-gradient(to bottom, #fffaf5 0%, #fff7ef 100%);
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.franchise-benefit h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 2rem;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.franchise-benefit .subtitle {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.05rem;
+  color: #7c6a4b;
+  margin-bottom: 50px;
+}
+
+/* ===== 2x2 레이아웃 ===== */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 80px;
+  justify-items: center;
+  align-items: center;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+.benefit-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: grayscale(40%) brightness(0.95); /* 살짝 톤 다운 */
+}
+
+.benefit-item p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  color: #4e3c2a;
+}
+
+.benefit-item strong {
+  color: #b68d57; /* 메인 포인트 컬러 */
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .benefit-item img {
+    width: 70px;
+    height: 70px;
+  }
+}
