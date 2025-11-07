@@ -1,24 +1,99 @@
-/* 문의 페이지 레이아웃 */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 32px;
-  align-items: flex-start;
-  margin-top: 46px;
+/* ===== 문의사항 상단 이미지 (히어로 영역) ===== */
+.inquiry-hero {
+  position: relative;
+  background: url('../images/Q.png') center center / cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
-.contact-form,
-.contact-side {
+
+.inquiry-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.inquiry-content {
+  position: relative;
+  z-index: 2;
+}
+
+.inquiry-content h2 {
+  font-family: 'GmarketSansBold';
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.inquiry-content p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+
+/* ===== 문의 폼 ===== */
+.inquiry-form-section {
+  background: linear-gradient(to bottom, #fffaf5, #fff7ef);
+  padding: 100px 20px;
+}
+
+.inquiry-card {
+  max-width: 700px;
+  margin: 0 auto;
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
-  padding: 22px 22px 28px;
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-.contact-form h2,
-.contact-side h2 {
-  margin-top: 0;
+
+.form-group {
+  margin-bottom: 24px;
 }
-@media (max-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+
+.form-group label {
+  display: block;
+  font-family: 'GmarketSansMedium';
+  color: #4e3c2a;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5d6bb;
+  border-radius: 8px;
+  font-family: 'GmarketSansMedium';
+  font-size: 1rem;
+  color: #333;
+  background: #fffdf9;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b68d57;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #b68d57;
+  color: #fff;
+  font-family: 'GmarketSansBold';
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #a47d4b;
 }
