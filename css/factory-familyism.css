@@ -454,4 +454,35 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #b68d5
+  background: #b68d57;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.brand-text p {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.05rem;
+  color: #4e3c2a;
+  line-height: 1.9;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .brand-card {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .brand-text {
+    text-align: center;
+  }
+
+  .brand-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .brand-text p {
+    font-size: 0.95rem;
+  }
+}
+
