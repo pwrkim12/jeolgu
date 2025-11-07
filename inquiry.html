@@ -69,12 +69,13 @@
   <footer class="footer">
     <p>© 2025 절구팩토리. All rights reserved.</p>
   </footer>
+
   <script>
     // ✅ Google Apps Script Web App URL
     const scriptURL = "https://script.google.com/macros/s/AKfycby_MNnTuul9_hH8ZNwzLg6DyDSaRZQCNcWWWK1F2VJ4xk7lb7TN2OgD9Mjsc9mNCmI-/exec";
 
     // ✅ 문의 폼 전송 처리
-    document.querySelector("inquiryForm").addEventListener("submit", e => {
+    document.querySelector("#inquiryForm").addEventListener("submit", e => {
       e.preventDefault(); // 폼 새로고침 방지
 
       fetch(scriptURL, {
@@ -92,7 +93,5 @@
     });
   </script>
 
-
 </body>
-
 </html>
