@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>팩토리패밀리즘</title>
-  <!-- 공통 -->
+  <title data-i18n="familyism.metaTitle">팩토리패밀리즘</title>
   <link rel="stylesheet" href="css/common.css" />
-  <!-- 전용 -->
   <link rel="stylesheet" href="css/factory-familyism.css" />
 </head>
 
@@ -20,15 +18,15 @@
 
       <nav class="nav">
         <ul class="menu">
-          <li><a href="jeolgu-factory.html">절구팩토리</a></li>
-          <li><a href="jeolgu-mill.html">절구방앗간</a></li>
-          <li><a href="factory-familyism.html" class="is-active">팩토리패밀리즘</a></li>
-          <li><a href="inquiry.html">문의 사항</a></li>
+          <li><a href="jeolgu-factory.html" data-i18n="menu.factory">절구팩토리</a></li>
+          <li><a href="jeolgu-mill.html" data-i18n="menu.mill">절구방앗간</a></li>
+          <li><a href="factory-familyism.html" class="is-active" data-i18n="menu.familyism">팩토리패밀리즘</a></li>
+          <li><a href="inquiry.html" data-i18n="menu.inquiry">문의 사항</a></li>
         </ul>
       </nav>
 
       <div class="lang-box desktop-lang">
-        <select class="lang-select" data-lang-select>
+        <select id="languageSelect" class="lang-select">
           <option value="ko">🇰🇷 한국어</option>
           <option value="en">🇺🇸 English</option>
           <option value="ja">🇯🇵 日本語</option>
@@ -45,11 +43,11 @@
   <aside id="mobileDrawer" class="drawer" aria-hidden="true">
     <button id="drawerClose" class="drawer-close" aria-label="메뉴 닫기">×</button>
     <ul class="drawer-menu">
-      <li><a href="index.html">홈</a></li>
-      <li><a href="jeolgu-factory.html">절구팩토리</a></li>
-      <li><a href="jeolgu-mill.html">절구방앗간</a></li>
-      <li><a href="factory-familyism.html">팩토리패밀리즘</a></li>
-      <li><a href="inquiry.html">문의 사항</a></li>
+      <li><a href="index.html" data-i18n="menu.home">홈</a></li>
+      <li><a href="jeolgu-factory.html" data-i18n="menu.factory">절구팩토리</a></li>
+      <li><a href="jeolgu-mill.html" data-i18n="menu.mill">절구방앗간</a></li>
+      <li><a href="factory-familyism.html" data-i18n="menu.familyism">팩토리패밀리즘</a></li>
+      <li><a href="inquiry.html" data-i18n="menu.inquiry">문의 사항</a></li>
     </ul>
   </aside>
 
@@ -58,171 +56,171 @@
     <section class="sub-hero fa-hero">
       <div class="sub-hero-inner">
         <p class="eyebrow">JEOLGU FAMILYISM</p>
-        <h1>“가맹점이 있어야 본사가 있습니다.”</h1>
-        <p>소통과 정직을 바탕으로 함께 성장하는 절구팩토리 프랜차이즈.</p>
+        <h1 data-i18n="hero.title">“가맹점이 있어야 본사가 있습니다.”</h1>
+        <p data-i18n="hero.subtitle">소통과 정직을 바탕으로 함께 성장하는 절구팩토리 프랜차이즈.</p>
       </div>
     </section>
 
-<!-- 대표님 철학 / 브랜드 스토리 섹션 -->
-<section class="brand-card-section">
-  <div class="brand-card">
-    <div class="brand-photo">
-      <img src="images/jo.jpg" alt="대표님 사진" />
-    </div>
-    <div class="brand-text">
-      <h2>사람과 나눔을 먼저 생각합니다</h2>
-      <p>
-        절구팩토리는 ‘따뜻한 한 끼’의 가치를 넘어,<br>
-        지역 사회와 함께 성장하는 브랜드를 지향합니다.<br>
-        대표님의 꾸준한 기부 활동과 봉사정신은<br>
-        ‘떡 다실’의 모든 매장에 따뜻한 마음으로 이어지고 있습니다.
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- 대표님 철학 / 브랜드 스토리 섹션 -->
+    <section class="brand-card-section">
+      <div class="brand-card">
+        <div class="brand-photo">
+          <img src="images/jo.jpg" alt="대표님 사진" />
+        </div>
+        <div class="brand-text">
+          <h2 data-i18n="brand.title">사람과 나눔을 먼저 생각합니다</h2>
+          <p data-i18n="brand.text">
+            절구팩토리는 ‘따뜻한 한 끼’의 가치를 넘어,<br>
+            지역 사회와 함께 성장하는 브랜드를 지향합니다.<br>
+            대표님의 꾸준한 기부 활동과 봉사정신은<br>
+            ‘떡 다실’의 모든 매장에 따뜻한 마음으로 이어지고 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- ✅ 한 섹션 통합 버전 -->
+    <!-- 프랜차이즈 인테리어 -->
     <section class="artisan-hero">
       <div class="artisan-overlay"></div>
       <div class="artisan-content">
-        <h2>프랜차이즈 인테리어는 장인이 직접 만듭니다</h2>
-        <p>
+        <h2 data-i18n="artisan.title">프랜차이즈 인테리어는 장인이 직접 만듭니다</h2>
+        <p data-i18n="artisan.text">
           절구팩토리의 인테리어는 ‘한옥을 짓는 마음’으로 시공됩니다.<br>
           전통 한옥 장인들이 직접 참여하여, 나무의 결 하나까지 세심히 다룹니다.<br>
           단순한 공간이 아닌 ‘철학이 담긴 매장’을 만들어 드립니다.
         </p>
 
         <div class="artisan-quote-box">
-          <p class="quote">
+          <p class="quote" data-i18n="artisan.quote">
             한옥은 기술이 아니라 <strong>마음의 일</strong>입니다.<br>
             눈으로 짓지 않고, 마음으로 세웁니다.<br>
             흙과 나무, 바람까지도 함께 살아가는 집.<br>
             그게 내가 짓는 한옥입니다.
           </p>
-          <p class="signature">– 장인 양현모–</p>
-          <p class="sub-note">절구팩토리의 ‘떡 다실’ 포인트 인테리어는<br>양현모 장인과 함께합니다.</p>
+          <p class="signature" data-i18n="artisan.signature">– 장인 양현모 –</p>
+          <p class="sub-note" data-i18n="artisan.subnote">
+            절구팩토리의 ‘떡 다실’ 포인트 인테리어는<br>양현모 장인과 함께합니다.
+          </p>
         </div>
       </div>
     </section>
 
-
-
-    <!-- ✅ [여기에 새로 추가] 창업혜택 4가지 -->
+    <!-- 창업혜택 -->
     <section class="franchise-benefit">
       <div class="container">
-        <h2>창업혜택</h2>
-        <p class="subtitle">‘떡 다실’의 특별 無 4가지 혜택을 받아보세요</p>
+        <h2 data-i18n="benefit.title">창업혜택</h2>
+        <p class="subtitle" data-i18n="benefit.subtitle">‘떡 다실’의 특별 無 4가지 혜택을 받아보세요</p>
 
         <div class="benefit-grid">
           <div class="benefit-item">
             <img src="images/1.png" alt="가맹비 없음">
-            <p>가맹비 <strong>無</strong></p>
+            <p data-i18n="benefit.item1">가맹비 <strong>無</strong></p>
           </div>
           <div class="benefit-item">
             <img src="images/2.png" alt="감리비 없음">
-            <p>감리비 <strong>無</strong></p>
+            <p data-i18n="benefit.item2">감리비 <strong>無</strong></p>
           </div>
           <div class="benefit-item">
             <img src="images/3.png" alt="월 로열티 없음">
-            <p>월 로열티 <strong>無</strong></p>
+            <p data-i18n="benefit.item3">월 로열티 <strong>無</strong></p>
           </div>
           <div class="benefit-item">
             <img src="images/4.png" alt="물류보증금 없음">
-            <p>물류보증금 <strong>無</strong></p>
+            <p data-i18n="benefit.item4">물류보증금 <strong>無</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. 프랜차이즈 비용 표 -->
+    <!-- 창업비용 표 -->
     <section class="section franchise-table">
       <div class="container">
         <div class="section-title">
-          <h2>창업비용</h2>
-          <p class="subtitle">합리적인 비용으로 점주님들의 부담을 덜어 드립니다.</p>
+          <h2 data-i18n="cost.title">창업비용</h2>
+          <p class="subtitle" data-i18n="cost.subtitle">합리적인 비용으로 점주님들의 부담을 덜어 드립니다.</p>
         </div>
         <table class="price-table highlight-table">
           <thead>
             <tr>
-              <th>구분</th>
-              <th>5평대</th>
-              <th>10평대</th>
+              <th data-i18n="table.header1">구분</th>
+              <th data-i18n="table.header2">5평대</th>
+              <th data-i18n="table.header3">10평대</th>
             </tr>
           </thead>
           <tbody>
             <tr class="strike">
-              <td>가맹비</td>
+              <td data-i18n="table.row1">가맹비</td>
               <td><span class="strike-text">300</span></td>
               <td><span class="strike-text">300</span></td>
             </tr>
             <tr class="strike">
-              <td>교육비</td>
+              <td data-i18n="table.row2">교육비</td>
               <td><span class="strike-text">100</span></td>
               <td><span class="strike-text">100</span></td>
             </tr>
             <tr class="strike">
-              <td>물류보증금</td>
+              <td data-i18n="table.row3">물류보증금</td>
               <td><span class="strike-text">300</span></td>
               <td><span class="strike-text">300</span></td>
             </tr>
             <tr>
-              <td>계약이행보증금</td>
+              <td data-i18n="table.row4">계약이행보증금</td>
               <td>100</td>
               <td>100</td>
             </tr>
             <tr class="merged-row">
-              <td colspan="3">가맹비 / 재가맹비 / 감리비 / 물류보증금 포함</td>
+              <td colspan="3" data-i18n="table.note1">가맹비 / 재가맹비 / 감리비 / 물류보증금 포함</td>
             </tr>
             <tr>
-              <td>로열티</td>
+              <td data-i18n="table.row5">로열티</td>
               <td>1.5% (VAT 별도)</td>
               <td>1.5% (VAT 별도)</td>
             </tr>
             <tr>
-              <td>인테리어 (가구등)</td>
+              <td data-i18n="table.row6">인테리어 (가구등)</td>
               <td>내부 / 평당 200</td>
               <td>내부 / 평당 160</td>
             </tr>
             <tr>
-              <td>주방기자재</td>
+              <td data-i18n="table.row7">주방기자재</td>
               <td>1600</td>
               <td>1900</td>
             </tr>
             <tr>
-              <td>디피/홍보물</td>
+              <td data-i18n="table.row8">디피/홍보물</td>
               <td>50</td>
               <td>100</td>
             </tr>
             <tr>
-              <td>간판/내부사인물</td>
+              <td data-i18n="table.row9">간판/내부사인물</td>
               <td>50</td>
               <td>100</td>
             </tr>
             <tr>
-              <td class="total">합계</td>
+              <td class="total" data-i18n="table.total">합계</td>
               <td class="total">2,700</td>
               <td class="total">3,500</td>
             </tr>
           </tbody>
         </table>
 
-        <p class="note">
+        <p class="note" data-i18n="table.note2">
           <strong class="highlight">5평 기준 2000만원대 창업!</strong><br>
           프랜차이즈 월 평균 <span class="emphasis">1500만원 이상</span> 순수익 <span class="highlight">60% 이상</span>
         </p>
       </div>
     </section>
 
+    <!-- 푸터 -->
     <footer class="footer">
-      <p>© 2025 2STO Clone. All rights reserved.</p>
-      <p>서울특별시 강남구 테헤란로 123, 2STO 빌딩 6층</p>
-      <p>TEL. 02-1234-5678, E-mail. info@2sto.com</p>
+      <p data-i18n="footer.copy">© 2025 절구팩토리. All rights reserved.</p>
+      <p data-i18n="footer.addr">서울특별시 강남구 테헤란로 123, 절구팩토리 빌딩 6층</p>
+      <p data-i18n="footer.contact">TEL. 02-1234-5678 | E-mail. info@jeolgu.com</p>
     </footer>
+  </main>
 
-    <script defer src="js/i18n.js"></script>
-    <script defer src="js/nav.js"></script>
-
-
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/i18n.js"></script>
 </body>
 
 </html>
