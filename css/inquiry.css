@@ -1,8 +1,8 @@
-/* ===== 문의사항 상단 이미지 (히어로 영역) ===== */
+/* ===== 상단 배경 히어로 ===== */
 .inquiry-hero {
   position: relative;
   background: url('../images/Q.png') center center / cover no-repeat;
-  height: 400px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,22 +21,29 @@
   z-index: 2;
 }
 
-.inquiry-content h2 {
+.inquiry-content .eyebrow {
+  font-family: 'GmarketSansMedium';
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.inquiry-content h1 {
   font-family: 'GmarketSansBold';
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  font-size: 2.4rem;
+  margin: 14px 0 10px;
 }
 
 .inquiry-content p {
   font-family: 'GmarketSansMedium';
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
 }
 
-/* ===== 문의 폼 ===== */
+/* ===== 문의 폼 섹션 ===== */
 .inquiry-form-section {
-  background: linear-gradient(to bottom, #fffaf5, #fff7ef);
+  background: linear-gradient(to bottom, #fffaf5 0%, #fff7ef 100%);
   padding: 100px 20px;
 }
 
@@ -96,4 +103,24 @@
 
 .submit-btn:hover {
   background: #a47d4b;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 768px) {
+  .inquiry-card {
+    padding: 36px 24px;
+  }
+
+  .inquiry-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
 }
