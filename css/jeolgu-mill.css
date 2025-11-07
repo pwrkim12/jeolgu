@@ -27,9 +27,24 @@
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* ✅ 3개 고정 */
   gap: 32px;
+  justify-items: center;
 }
+
+/* 태블릿 / 모바일 반응형 컬럼 조정 */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 태블릿에서는 2개 */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* ✅ 모바일에서는 1개 */
+  }
+}
+
 
 .menu-card {
   background: #fff;
