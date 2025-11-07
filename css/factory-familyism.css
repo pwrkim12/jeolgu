@@ -304,3 +304,92 @@
   color: #2c1a0a;
   font-weight: 600;
 }
+
+
+/* ===== 장인 시공 소개 섹션 ===== */
+.artisan-section {
+  background: linear-gradient(to bottom, #fffaf5, #fff7ef);
+  padding: 80px 20px 100px;
+}
+
+.artisan-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.artisan-text h3 {
+  font-family: 'GmarketSansBold';
+  font-size: 1.5rem;
+  color: #3a2e1f;
+  margin-bottom: 18px;
+}
+
+.artisan-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.artisan-text li {
+  font-family: 'GmarketSansMedium';
+  color: #5b4a36;
+  font-size: 1rem;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 12px;
+}
+
+.artisan-text li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #b68d57;
+}
+
+/* 오른쪽 문구 영역 */
+.artisan-quote {
+  text-align: center;
+  font-family: 'GmarketSansMedium';
+  color: #3e2d20;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.artisan-quote .quote-text {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #3b2b1c;
+  margin-bottom: 20px;
+}
+
+.artisan-quote strong {
+  color: #b68d57;
+}
+
+.artisan-quote .signature {
+  font-family: 'GmarketSansBold';
+  color: #4e3c2a;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.artisan-quote .note {
+  font-size: 0.9rem;
+  color: #6c5a45;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .artisan-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
