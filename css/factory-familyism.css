@@ -279,3 +279,23 @@
   margin-top: 10px;
 }
 
+/* ===== 표 하단 설명 강조 ===== */
+.note {
+  text-align: center;
+  font-family: 'GmarketSansMedium';
+  font-size: 1.15rem;
+  color: #7c6a4b;
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+.note .highlight {
+  color: #b68d57; /* 브랜드 포인트 컬러 */
+  font-family: 'GmarketSansBold';
+  font-size: 1.3rem;
+}
+
+.note .emphasis {
+  color: #4e3c2a;
+  font-weight: 600;
+}
