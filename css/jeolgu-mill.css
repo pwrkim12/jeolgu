@@ -29,7 +29,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* ✅ 3개 고정 */
   gap: 32px;
-  justify-items: center;
+  justify-items: stretch; /* ✅ 모든 카드 폭/높이 동일하게 */
+  align-items: stretch;   /* ✅ 카드 높이 동일하게 */
+
 }
 
 /* 태블릿 / 모바일 반응형 컬럼 조정 */
