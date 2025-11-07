@@ -1,6 +1,6 @@
 /* 상단 흑백 헤더 */
 .fa-hero {
-  background: url('../images/fa.jpg') center center / cover no-repeat;
+  background: url('../images/fa.png') center center / cover no-repeat;
   filter: grayscale(100%);
   height: 480px;
   color: #fff;
