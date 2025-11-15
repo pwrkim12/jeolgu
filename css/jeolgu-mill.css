@@ -283,7 +283,7 @@
 /* 모바일에서 h1만 작게 */
 @media (max-width: 768px) {
   .mill-hero h1.mobile-text {
-    font-size: 1.7rem;   /* 🔥 여기 숫자만 조절하면 됨 */
+    font-size: 1.6rem;   /* 🔥 여기 숫자만 조절하면 됨 */
     line-height: 1.35;
   }
 }
