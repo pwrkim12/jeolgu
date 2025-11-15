@@ -564,3 +564,27 @@
   .fa-hero .sub-hero-inner {
     margin-top: -60px; /* 모바일에서 글씨 위치 살짝 위로 보정 */
   }
+
+  /* ============================
+   📱 브랜드카드 모바일 정렬 FIX
+============================ */
+@media (max-width: 768px) {
+
+  /* 텍스트 전체 가운데 정렬 */
+  .brand-text {
+    text-align: center !important;
+  }
+
+  /* 밑줄 가운데 정렬 */
+  .brand-text h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 문단 폭 줄여서 더 정갈하게 */
+  .brand-text p {
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+}
