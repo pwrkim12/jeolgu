@@ -610,3 +610,22 @@
     line-height: 1.4;
   }
 }
+
+/* PC/Mobile 텍스트 분리 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
+
+@media (max-width: 768px) {
+  .pc-text { display: none !important; }
+  .mobile-text { display: block !important; }
+
+  /* note 모바일 가독성 최적화 */
+  .note.mobile-text {
+    font-size: 1.2rem; 
+    line-height: 1.55;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 10px;
+    word-break: keep-all;
+  }
+}
