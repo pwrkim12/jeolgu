@@ -506,3 +506,55 @@
     padding-top: 40px;
   }
 }
+
+/* =========================================
+   📱 패밀리즘 페이지 전용 MOBILE HERO 디자인
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* 히어로 섹션 높이 & 배경 정렬 */
+  .fa-hero {
+    height: 420px !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  /* 오버레이 살짝 어둡게 */
+  .fa-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55) !important;
+    backdrop-filter: blur(1px);
+    z-index: 1;
+  }
+
+  /* 내부 텍스트 위치 ↓ 아래로 내리기 */
+  .fa-hero .sub-hero-inner {
+    position: relative;
+    top: 25px !important;
+    padding: 0 20px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* EYEBROW (JEOLGU FAMILYISM) */
+  .fa-hero .eyebrow {
+    font-size: 0.85rem !important;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  /* 메인 타이틀(h1) 모바일 크기 */
+  .fa-hero h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 16px;
+  }
+
+  /* 본문 문구 */
+  .fa-hero p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+}
