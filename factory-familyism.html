@@ -12,34 +12,46 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="절구팩토리" />
-      </a>
+ <!-- 헤더 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="절구팩토리" />
+    </a>
 
-      <nav class="nav">
-        <ul class="menu">
-          <li><a href="jeolgu-factory.html">절구팩토리</a></li>
-          <li><a href="jeolgu-mill.html">절구방앗간</a></li>
-          <li><a href="factory-familyism.html" class="is-active">팩토리패밀리즘</a></li>
-          <li><a href="inquiry.html">문의 사항</a></li>
-        </ul>
-      </nav>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="jeolgu-factory.html">절구팩토리</a></li>
+        <li><a href="jeolgu-mill.html">절구방앗간</a></li>
+        <li><a href="factory-familyism.html">팩토리패밀리즘</a></li>
+        <li><a href="inquiry.html">문의 사항</a></li>
+      </ul>
+    </nav>
 
-      <div class="lang-box desktop-lang">
-        <select class="lang-select" data-lang-select>
-          <option value="ko">🇰🇷 한국어</option>
-          <option value="en">🇺🇸 English</option>
-          <option value="ja">🇯🇵 日本語</option>
-        </select>
-      </div>
+    <!-- 📌 모바일 햄버거 버튼 (정확한 삽입 위치) -->
+    <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
 
-      <button id="hamburger" class="hamburger" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+  </div>
+
+
+  <!-- 📌 모바일 드로어 메뉴 -->
+<div id="mobileDrawer" class="drawer" aria-hidden="true">
+  <button id="drawerClose" class="drawer-close">✕</button>
+
+  <ul class="drawer-menu">
+    <li><a href="jeolgu-factory.html">절구팩토리</a></li>
+    <li><a href="jeolgu-mill.html">절구방앗간</a></li>
+    <li><a href="factory-familyism.html">팩토리패밀리즘</a></li>
+    <li><a href="inquiry.html">문의 사항</a></li>
+  </ul>
+</div>
+
+<!-- 📌 드로어 배경 -->
+<div id="drawerBackdrop" class="drawer-backdrop"></div>
+</header>
 
   <div id="drawerBackdrop" class="backdrop"></div>
   <aside id="mobileDrawer" class="drawer" aria-hidden="true">
