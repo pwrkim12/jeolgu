@@ -588,3 +588,25 @@
     line-height: 1.7;
   }
 }
+
+/* 📱 모바일 전용 — 창업혜택을 2×2 레이아웃으로 정렬 */
+@media (max-width: 768px) {
+
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2열로 */
+    gap: 30px 20px; /* 상하/좌우 간격 조절 */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .benefit-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .benefit-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
