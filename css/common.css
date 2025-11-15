@@ -286,3 +286,17 @@ p, li, label, input, textarea, select, button {
   font-weight: normal;
 }
 
+/* PC 기본 유지 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
+
+/* 모바일에서 교체 */
+@media (max-width: 768px) {
+  .pc-text { display: none; }
+  .mobile-text {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+}
