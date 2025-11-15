@@ -403,7 +403,7 @@
 @media (max-width: 768px) {
   .mobile-text h2,
   h2.mobile-text {
-    font-size: 1.7rem; /* 원하는 크기로 조절 */
+    font-size: 1.6rem; /* 원하는 크기로 조절 */
     line-height: 1.35;
     text-align: center;
   }
