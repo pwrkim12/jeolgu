@@ -245,6 +245,7 @@ main {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+
   }
   .logo {
     grid-column: 2;
@@ -283,4 +284,24 @@ h1, h2, h3, h4, h5, h6,
 p, li, label, input, textarea, select, button {
   font-family: 'GmarketSansMedium', 'Noto Sans KR', sans-serif; /* ✅ 본문/설명용 */
   font-weight: normal;
+}
+
+/* =========================================
+   📌 모바일 햄버거 버튼 강제 노출 Fix
+   (index 페이지에서 안 보이는 문제 해결)
+========================================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block !important;        /* 혹시 숨겨져 있으면 강제 표시 */
+    position: absolute;
+    top: 18px;                        /* 헤더 안에서 정확한 위치 잡기 */
+    right: 16px;
+    z-index: 9999;                    /* 다른 요소보다 최상단 */
+  }
+
+  /* 햄버거 막대 색상 명확하게 */
+  .hamburger span {
+    background: #1b1b1b !important;   /* 밝은 배경에서도 잘 보임 */
+  }
 }
