@@ -14,14 +14,12 @@
     body.classList.add("drawer-open");
     if (openBtn)  openBtn.setAttribute("aria-expanded", "true");
     if (drawer)   drawer.setAttribute("aria-hidden", "false");
-    if (backdrop) backdrop.style.pointerEvents = "auto";
   };
 
   const closeDrawer = () => {
     body.classList.remove("drawer-open");
     if (openBtn)  openBtn.setAttribute("aria-expanded", "false");
     if (drawer)   drawer.setAttribute("aria-hidden", "true");
-    if (backdrop) backdrop.style.pointerEvents = "none";
   };
 
   if (openBtn)  openBtn.addEventListener("click", openDrawer);
@@ -30,7 +28,6 @@
 
   links.forEach((el) => {
     el.addEventListener("click", () => {
-      // select 는 change 때만 닫고 싶으면 분기하면 됨
       closeDrawer();
     });
   });
