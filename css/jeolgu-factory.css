@@ -399,3 +399,12 @@
   .pc-text { display: none; }
   .mobile-text { display: block; }
 }
+
+@media (max-width: 768px) {
+  .mobile-text h2,
+  h2.mobile-text {
+    font-size: 1.6rem; /* 원하는 크기로 조절 */
+    line-height: 1.35;
+    text-align: center;
+  }
+}
