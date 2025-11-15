@@ -239,71 +239,33 @@ main {
   font-size: 0.85rem;
 }
 
-/* =========================================
-   📌 공통: 반응형 헤더 + 햄버거 버튼 통합본
-   (기존 코드 + 햄버거 버그 수정 완전체)
-========================================= */
+/* ===== 공통: 반응형 ===== */
 @media (max-width: 768px) {
-
-  /* 헤더 기본 레이아웃 */
   .site-header .header-inner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    position: relative; /* 햄버거 absolute 배치 가능하게 */
-    padding: 14px 16px;
-    z-index: 50;
-  }
 
-  /* 로고 중앙 배치 */
+  }
   .logo {
     grid-column: 2;
     justify-self: center;
     margin-right: 0;
   }
-
-  /* PC 메뉴는 숨김 */
+  .hamburger {
+    display: inline-block;
+    grid-column: 3;
+    justify-self: end;
+  }
   .nav,
   .desktop-lang,
   .lang-box {
     display: none !important;
   }
-
-  /* 햄버거 표시 (기본) */
-  .hamburger {
-    display: inline-block !important;
-    grid-column: 3;
-    justify-self: end;
-  }
-
-
-  /* =====================================
-     📌 햄버거 버튼 강제 보정 (핵심 부분)
-     - index 페이지에서 배경 때문에 안 보였던 문제 해결
-     - 모든 모바일 페이지에서 안정적으로 노출
-  ====================================== */
-  .hamburger {
-    position: absolute;   /* header-inner 기준으로 위치시키기 */
-    right: 16px;
-    top: 18px;
-    z-index: 9999;        /* 어떤 요소보다 최상단 */
-    width: 28px;
-    height: 22px;
-  }
-
-  /* 햄버거 막대 색 (배경 밝아도 잘 보이게) */
-  .hamburger span {
-    background-color: #1b1b1b !important;
-    height: 3px;
-    border-radius: 3px;
-  }
-
-  /* 섹션 padding 축소 (공통 모바일 여백) */
   .section {
     padding: 46px 14px;
   }
 }
-
 
 
 /* ===== 공통: 폰트 굵기 설정 (추가됨) ===== */
