@@ -562,5 +562,5 @@
 
 
   .fa-hero .sub-hero-inner {
-    margin-top: 20px; /* 모바일에서 글씨 위치 살짝 위로 보정 */
+    margin-top: -40px; /* 모바일에서 글씨 위치 살짝 위로 보정 */
   }
