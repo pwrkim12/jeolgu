@@ -291,24 +291,22 @@
 }
 
 
-/* ===============================
-   절구방앗간 HERO — 모바일 전용 스타일
-================================= */
+/* PC/Mobile 텍스트 분리 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
 
-/* 1) 모바일에서 h1 글자 크기 줄이기 */
+@media (max-width: 768px) {
+  .pc-text { display: none; }
+  .mobile-text { display: block; }
+}
+
+/* 모바일에서 제목(h1)만 작게 */
 @media (max-width: 768px) {
   .mill-hero .mobile-text {
-    font-size: 1.65rem; /* 🔥 절구팩토리 모바일 h2와 거의 동일 크기 */
+    font-size: 1.7rem; 
     line-height: 1.35;
     text-align: center;
     word-break: keep-all;
   }
 }
 
-/* 2) HERO 전체를 아래로 살짝 내리기 (절구팩토리와 동일) */
-@media (max-width: 768px) {
-  .mill-hero-inner {
-    position: relative;
-    top: 30px;       /* 🔥 절구팩토리 about-content top:30px; 과 동일효과 */
-  }
-}
