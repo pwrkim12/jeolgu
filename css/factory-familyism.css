@@ -514,7 +514,7 @@
 
   /* 히어로 섹션 높이 & 배경 정렬 */
   .fa-hero {
-    height: 250px !important;
+    height: 300px !important;
     background-position: center center !important;
     background-size: cover !important;
   }
