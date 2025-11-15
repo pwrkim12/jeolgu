@@ -390,3 +390,12 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* PC/Mobile 텍스트 분리 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
+
+@media (max-width: 768px) {
+  .pc-text { display: none; }
+  .mobile-text { display: block; }
+}
