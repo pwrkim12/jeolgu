@@ -486,3 +486,23 @@
   }
 }
 
+/* PC / Mobile 텍스트 분리 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
+
+@media (max-width: 768px) {
+  .pc-text { display: none; }
+  .mobile-text { display: block; }
+
+  /* 모바일 H1 크기 조절 */
+  .sub-hero .mobile-text {
+    font-size: 1.7rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  /* 히어로 안쪽 전체를 조금 아래로 */
+  .sub-hero-inner {
+    padding-top: 40px;
+  }
+}
