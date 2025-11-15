@@ -514,7 +514,7 @@
 
   /* 히어로 섹션 높이 & 배경 정렬 */
   .fa-hero {
-    height: 420px !important;
+    height: 380px !important;
     background-position: center center !important;
     background-size: cover !important;
   }
@@ -559,13 +559,8 @@
   }
 }
 
-/* 📌 패밀리즘 모바일 히어로 높이 조절 */
-@media (max-width: 768px) {
-  .fa-hero {
-    height: 360px; /* 원하는 만큼 줄여도 됨 */
-  }
+
 
   .fa-hero .sub-hero-inner {
     margin-top: -20px; /* 모바일에서 글씨 위치 살짝 위로 보정 */
   }
-}
