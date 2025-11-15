@@ -279,34 +279,4 @@
 }
 
 
-/* ===============================
-   PC / Mobile 텍스트 분리 (공통)
-================================= */
-.pc-text { display: block; }
-.mobile-text { display: none; }
-
-@media (max-width: 768px) {
-  .pc-text { display: none; }
-  .mobile-text { display: block; }
-}
-
-
-/* PC/Mobile 텍스트 분리 */
-.pc-text { display: block; }
-.mobile-text { display: none; }
-
-@media (max-width: 768px) {
-  .pc-text { display: none; }
-  .mobile-text { display: block; }
-}
-
-/* 모바일에서 제목(h1)만 작게 */
-@media (max-width: 768px) {
-  .mill-hero .mobile-text {
-    font-size: 1.7rem; 
-    line-height: 1.35;
-    text-align: center;
-    word-break: keep-all;
-  }
-}
 
