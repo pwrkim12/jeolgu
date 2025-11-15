@@ -156,3 +156,22 @@
   color: #54e04a;
   font-weight: bold;
 }
+
+/* PC: 긴 문단만 보임 */
+.pc-text { display: block; }
+.mobile-text { display: none; }
+
+/* 모바일: 요약문만 보임 */
+@media (max-width: 768px) {
+  .pc-text { display: none; }
+
+  .mobile-text {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    word-break: keep-all;
+  }
+}
