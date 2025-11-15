@@ -173,7 +173,7 @@
     line-height: 1.85; /* ★ 가독성 강화 */
     max-width: 92%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     word-break: keep-all;
     color: #2b2018; /* PC 톤과 동일 */
     padding: 10px 4px;
